@@ -255,11 +255,11 @@ const Index = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-blue-400" />
-                  <span>+49 (0) 123 456 789</span>
+                  <span>+49 162 1992865</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-blue-400" />
-                  <span>sebastian@mathenachhilfe.de</span>
+                  <span>s.zscherneck[at]web.de</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-blue-400" />
