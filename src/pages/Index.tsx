@@ -1,4 +1,3 @@
-
 import { Calculator, Users, Award, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -26,6 +25,13 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
+            <div className="flex justify-center mb-8">
+              <img 
+                src="/lovable-uploads/d25fb8b4-469e-4c23-9b95-3e2864813d69.png" 
+                alt="Sebastian - Mathe Nachhilfelehrer" 
+                className="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-white"
+              />
+            </div>
             <h2 className="text-5xl font-bold text-gray-900 mb-6">
               Professionelle <span className="text-blue-600">Mathenachhilfe</span>
             </h2>
@@ -259,14 +265,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="mt-8">
-                <h5 className="font-semibold mb-3">Unterrichtszeiten</h5>
-                <div className="text-gray-300 text-sm space-y-1">
-                  <div>Montag - Freitag: 14:00 - 20:00 Uhr</div>
-                  <div>Samstag: 09:00 - 16:00 Uhr</div>
-                  <div>Sonntag: Nach Vereinbarung</div>
-                </div>
-              </div>
+              
             </div>
             
             <div>
