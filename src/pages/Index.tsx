@@ -43,8 +43,12 @@ const Index = () => {
                 Mit individueller Betreuung und bewährten Methoden zum Erfolg!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3">
-                  Jetzt Termin vereinbaren
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3"
+                  onClick={() => window.location.href = 'tel:+491621992865'}
+                >
+                  Jetzt anrufen
                 </Button>
                 <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8 py-3">
                   Mehr erfahren
@@ -263,7 +267,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-blue-400" />
-                  <span>Verfügbar für Online- und Präsenzunterricht</span>
+                  <span>Verfügbar für Präsenzunterricht in Egelsbach</span>
                 </div>
               </div>
               
