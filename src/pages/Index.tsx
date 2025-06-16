@@ -24,7 +24,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4" id="ueber-mich">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center mb-12">
             <div className="flex justify-center md:justify-start">
