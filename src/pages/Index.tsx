@@ -1,5 +1,3 @@
-
-
 import { Calculator, Users, Award, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -263,62 +261,33 @@ const Index = () => {
             <p className="text-gray-300">Bereit für bessere Noten? Lass uns sprechen!</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h4 className="text-xl font-semibold mb-6">Kontaktinformationen</h4>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-blue-400" />
-                  <span>+49 162 1992865</span>
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-gray-800 rounded-lg p-8">
+              <h4 className="text-xl font-semibold mb-6 text-center">Kontaktinformationen</h4>
+              <div className="space-y-6">
+                <div className="flex items-center justify-center space-x-4">
+                  <Phone className="h-6 w-6 text-blue-400" />
+                  <span className="text-lg">+49 162 1992865</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-blue-400" />
-                  <span>s.zscherneck[at]web.de</span>
+                <div className="flex items-center justify-center space-x-4">
+                  <Mail className="h-6 w-6 text-blue-400" />
+                  <span className="text-lg">s.zscherneck[at]web.de</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="h-5 w-5 text-blue-400" />
-                  <span>Verfügbar für Präsenzunterricht in Egelsbach</span>
+                <div className="flex items-center justify-center space-x-4">
+                  <MapPin className="h-6 w-6 text-blue-400" />
+                  <span className="text-lg text-center">Verfügbar für Präsenzunterricht in Egelsbach</span>
                 </div>
               </div>
               
-              
-            </div>
-            
-            <div>
-              <Card className="bg-gray-800 border-gray-700">
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-semibold mb-4 text-white">Nachricht senden</h4>
-                  <form className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium mb-2 text-gray-300">Name</label>
-                      <input
-                        type="text"
-                        className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400"
-                        placeholder="Dein Name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2 text-gray-300">E-Mail</label>
-                      <input
-                        type="email"
-                        className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400"
-                        placeholder="deine@email.de"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2 text-gray-300">Nachricht</label>
-                      <textarea
-                        rows={4}
-                        className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400"
-                        placeholder="Beschreibe kurz, wobei du Hilfe benötigst..."
-                      ></textarea>
-                    </div>
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                      Nachricht senden
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+              <div className="mt-8 text-center">
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3"
+                  onClick={() => window.location.href = 'tel:+491621992865'}
+                >
+                  Jetzt anrufen
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -341,4 +310,3 @@ const Index = () => {
 };
 
 export default Index;
-
