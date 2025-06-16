@@ -1,4 +1,5 @@
 
+
 import { Calculator, Users, Award, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -23,36 +24,36 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-8">
+          <div className="grid md:grid-cols-2 gap-16 items-center mb-12">
             <div className="flex justify-center md:justify-start">
               <img 
                 src="/lovable-uploads/d25fb8b4-469e-4c23-9b95-3e2864813d69.png" 
                 alt="Sebastian - Mathe Nachhilfelehrer" 
-                className="w-64 h-64 rounded-full object-cover shadow-lg border-4 border-white"
+                className="w-64 h-64 rounded-full object-cover shadow-xl border-4 border-white"
               />
             </div>
             <div className="text-center md:text-left">
-              <h2 className="text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                 Professionelle <span className="text-blue-600">Mathenachhilfe</span>
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Ich bin Sebastian und helfe Schülern und Studenten dabei, ihre mathematischen Fähigkeiten zu verbessern. 
+              <p className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
+                Hi, ich bin Sebastian! Ich helfe Schülern und Studenten dabei, ihre mathematischen Fähigkeiten zu verbessern. 
                 Mit individueller Betreuung und bewährten Methoden zum Erfolg!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3">
                   Jetzt Termin vereinbaren
                 </Button>
-                <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8 py-3">
                   Mehr erfahren
                 </Button>
               </div>
             </div>
           </div>
           
-          <div className="flex justify-center space-x-8 text-sm text-gray-500 mt-12">
+          <div className="flex justify-center space-x-8 text-sm text-gray-500">
             <div className="flex items-center space-x-2">
               <Users className="h-5 w-5 text-green-600" />
               <span>10+ erfolgreiche Schüler</span>
@@ -328,3 +329,4 @@ const Index = () => {
 };
 
 export default Index;
+
