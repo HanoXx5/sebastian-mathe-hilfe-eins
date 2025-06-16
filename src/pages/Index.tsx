@@ -48,9 +48,19 @@ const Index = () => {
                   className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3"
                   onClick={() => window.location.href = 'tel:+491621992865'}
                 >
-                  Jetzt anrufen
+                  Jetzt Termin vereinbaren
                 </Button>
-                <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8 py-3">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8 py-3"
+                  onClick={() => {
+                    const section = document.getElementById("ueber-mich");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
                   Mehr erfahren
                 </Button>
               </div>
@@ -104,8 +114,8 @@ const Index = () => {
                     <div className="text-blue-100">Erfolgreiche Schüler</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2">100%</div>
-                    <div className="text-blue-100">Zufriedenheit</div>
+                    <div className="text-3xl font-bold mb-2">kostenlos!</div>
+                    <div className="text-blue-100">1. Stunde</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold mb-2">2+</div>
