@@ -104,12 +104,12 @@ const Index = () => {
                     <div className="text-blue-100">Zufriedenheit</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2">3+</div>
+                    <div className="text-3xl font-bold mb-2">2+</div>
                     <div className="text-blue-100">Jahre Erfahrung</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2">∞</div>
-                    <div className="text-blue-100">Motivation</div>
+                    <div className="text-3xl font-bold mb-2">2-13</div>
+                    <div className="text-blue-100">Klassenstufen</div>
                   </div>
                 </div>
               </div>
@@ -159,7 +159,6 @@ const Index = () => {
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li>• Lineare Algebra</li>
                   <li>• Analysis I & II</li>
-                  <li>• Statistik & Wahrscheinlichkeit</li>
                   <li>• Klausurvorbereitung</li>
                 </ul>
               </CardContent>
@@ -177,7 +176,6 @@ const Index = () => {
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li>• Abitur-Vorbereitung</li>
                   <li>• Nachprüfungen</li>
-                  <li>• Uni-Eingangsprüfungen</li>
                   <li>• Crashkurse</li>
                 </ul>
               </CardContent>
@@ -200,12 +198,12 @@ const Index = () => {
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">L</div>
                   <div className="ml-3">
-                    <div className="font-semibold">Lisa, 11. Klasse</div>
+                    <div className="font-semibold">Lilian, 12. Klasse</div>
                     <div className="text-sm text-gray-600">Gymnasium</div>
                   </div>
                 </div>
                 <p className="text-gray-700 italic">
-                  "Sebastian hat mir geholfen, meine Matheangs zu überwinden. Von 4- auf 2+ in nur einem Halbjahr!"
+                  "Sebastian hat mir geholfen, von 4 auf 9 Punkte zu kommen, innerhalb von ein paar Monaten!"
                 </p>
               </CardContent>
             </Card>
@@ -215,12 +213,12 @@ const Index = () => {
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">M</div>
                   <div className="ml-3">
-                    <div className="font-semibold">Max, Student</div>
-                    <div className="text-sm text-gray-600">Maschinenbau</div>
+                    <div className="font-semibold">Lasse, 2. Klasse</div>
+                    <div className="text-sm text-gray-600">Grundschule</div>
                   </div>
                 </div>
                 <p className="text-gray-700 italic">
-                  "Dank Sebastian habe ich Analysis I bestanden. Seine Erklärungen sind einfach genial!"
+                  "Ich freue mich immer zu Sebastian zu kommen. Mathe macht dort einfach Spaß!"
                 </p>
               </CardContent>
             </Card>
@@ -230,12 +228,12 @@ const Index = () => {
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">A</div>
                   <div className="ml-3">
-                    <div className="font-semibold">Anna, 13. Klasse</div>
-                    <div className="text-sm text-gray-600">Abitur</div>
+                    <div className="font-semibold">Hanna, 12. Klasse</div>
+                    <div className="text-sm text-gray-600">Fach-Abitur</div>
                   </div>
                 </div>
                 <p className="text-gray-700 italic">
-                  "Perfekte Abiturvorbereitung! Sebastian macht Mathe verständlich und interessant."
+                  "Perfekte Fach-Abiturvorbereitung!"
                 </p>
               </CardContent>
             </Card>
