@@ -24,7 +24,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 px-4" id="ueber-mich">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center mb-12">
             <div className="flex justify-center md:justify-start">
@@ -55,7 +55,7 @@ const Index = () => {
                   size="lg"
                   className="border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8 py-3"
                   onClick={() => {
-                    const section = document.getElementById("ueber-mich");
+                    const section = document.getElementById("about");
                     if (section) {
                       section.scrollIntoView({ behavior: "smooth" });
                     }
