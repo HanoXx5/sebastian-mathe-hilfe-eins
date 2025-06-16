@@ -284,51 +284,45 @@ const Index = () => {
               
             </div>
             
-            <form
-              action="https://formsubmit.co/deine@email.de"
-              method="POST"
-              className="space-y-4"
-            >
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_subject" value="Neue Nachricht über Kontaktformular" />
-
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-300">Name</label>
-                <input
-                  name="name"
-                  type="text"
-                  required
-                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400"
-                  placeholder="Dein Name"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-300">E-Mail</label>
-                <input
-                  name="email"
-                  type="email"
-                  required
-                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400"
-                  placeholder="deine@email.de"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-300">Nachricht</label>
-                <textarea
-                  name="message"
-                  required
-                  rows={4}
-                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400"
-                  placeholder="Beschreibe kurz, wobei du Hilfe benötigst..."
-                ></textarea>
-              </div>
-
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
-                Nachricht senden
-              </Button>
-            </form>
+            <div>
+              <Card className="bg-gray-800 border-gray-700">
+                <CardContent className="p-6">
+                  <h4 className="text-xl font-semibold mb-4 text-white">Nachricht senden</h4>
+                  <form className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2 text-gray-300">Name</label>
+                      <input
+                        type="text"
+                        className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400"
+                        placeholder="Dein Name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2 text-gray-300">E-Mail</label>
+                      <input
+                        type="email"
+                        className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400"
+                        placeholder="deine@email.de"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2 text-gray-300">Nachricht</label>
+                      <textarea
+                        rows={4}
+                        className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400"
+                        placeholder="Beschreibe kurz, wobei du Hilfe benötigst..."
+                      ></textarea>
+                    </div>
+                    <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                      Nachricht senden
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-gray-300 py-8 px-4">
