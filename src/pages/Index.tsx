@@ -89,14 +89,10 @@ const Index = () => {
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Über mich</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Ich bin Sebastian, 20 Jahre alt, und ich helfe dir,
-                Mathe endlich zu verstehen, egal ob du gerade am Anfang stehst oder dich auf dein Abitur vorbereitest.
+                Ich bin Sebastian, 20 Jahre alt, und ich helfe dir, Mathe endlich zu verstehen, egal ob du gerade am Anfang stehst oder dich auf dein Abitur vorbereitest.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Mit 15 Punkten im Mathe-Leistungskurs und einem Abiturdurchschnitt von
-                1,2 bringe ich nicht nur das nötige Fachwissen mit, sondern auch die Erfahrung:
-                Ich habe bereits über 10 Schüler*innen aller Klassenstufen erfolgreich begleitet – von der 5. Klasse bis zum Abitur.
-                Auch Studierende mit Mathematik im Nebenfach unterstütze ich gerne und effektiv.
+                Mit 15 Punkten im Mathe-Leistungskurs und einem Abiturdurchschnitt von 1,2 bringe ich nicht nur das nötige Fachwissen mit, sondern auch die Erfahrung: Ich habe bereits über 10 Schüler*innen aller Klassenstufen erfolgreich begleitet – von der 1. Klasse bis zum Abitur. Auch Studierende mit Mathematik im Nebenfach unterstütze ich gerne und effektiv.
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Algebra</span>
