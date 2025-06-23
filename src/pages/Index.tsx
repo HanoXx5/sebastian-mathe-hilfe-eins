@@ -222,12 +222,12 @@ const Index = () => {
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">M</div>
                   <div className="ml-3">
-                    <div className="font-semibold">Lasse, 2. Klasse</div>
+                    <div className="font-semibold">Sarah, 2. und 5. Klasse</div>
                     <div className="text-sm text-gray-600">Grundschule</div>
                   </div>
                 </div>
                 <p className="text-gray-700 italic">
-                  "Ich freue mich immer zu Sebastian zu kommen. Mathe macht dort einfach Spaß!"
+                  "Meine beiden Söhne gehen sehr gerne zu Sebastian und üben zusammen mit ihm die aktuellen Matheaufgaben."
                 </p>
               </CardContent>
             </Card>
@@ -237,12 +237,12 @@ const Index = () => {
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">A</div>
                   <div className="ml-3">
-                    <div className="font-semibold">Hanna, 12. Klasse</div>
+                    <div className="font-semibold">Emily, 12. Klasse</div>
                     <div className="text-sm text-gray-600">Fach-Abitur</div>
                   </div>
                 </div>
                 <p className="text-gray-700 italic">
-                  "Perfekte Fach-Abiturvorbereitung!"
+                  "Sebastian [...] hat mir unglaublich gut geholfen und durch ihn hab ich mich in Mathe auch nicht so verzweifelt gefühlt. [...]  Ich kann Sebastian als Nachhilfelehrer nur wärmstens weiterempfehlen."
                 </p>
               </CardContent>
             </Card>
