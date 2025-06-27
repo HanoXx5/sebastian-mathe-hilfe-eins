@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import MathAnimation from "@/components/MathAnimation";
 import StarRating from "@/components/StarRating";
-import ContactForm from "@/components/ContactForm";
+import { useForm, ValidationError } from '@formspree/react';
 
 const [state, handleSubmit] = useForm("mzzgygov");
 const Index = () => {
