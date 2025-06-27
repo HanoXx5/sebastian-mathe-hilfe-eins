@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import MathAnimation from "@/components/MathAnimation";
 import StarRating from "@/components/StarRating";
 import ContactForm from "@/components/ContactForm";
+import React from 'react';
+import ParticlesBackground from './components/ParticlesBackground';
 
 const Index = () => {
   return (
@@ -87,8 +89,11 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-12 md:py-16 px-4 bg-gradient-to-r from-white via-blue-50 to-white">
-        <div className="max-w-6xl mx-auto">
+      <section id="about" className="relative py-12 md:py-16 px-4 bg-gradient-to-r from-white via-blue-50 to-white overflow-hidden">
+       <div className="absolute inset-0 z-0 pointer-events-none">
+          <ParticlesBackground />
+        </div>
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="animate-fade-in">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Über mich</h3>
@@ -211,7 +216,7 @@ const Index = () => {
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">L</div>
                   <div className="ml-3">
-                    <div className="font-semibold text-sm md:text-base">Lilian, 12. Klasse</div>
+                    <div className="font-semibold text-sm md:text-base">Maxi, 9. Klasse</div>
                     <div className="text-xs md:text-sm text-gray-600">Gymnasium</div>
                   </div>
                 </div>
@@ -220,7 +225,7 @@ const Index = () => {
                   <p className="text-xs text-gray-500 mt-1">Google Bewertung</p>
                 </div>
                 <p className="text-gray-700 italic text-sm md:text-base">
-                  "Sebastian hat mir geholfen, von 4 auf 9 Punkte zu kommen, innerhalb von ein paar Monaten!"
+                  "Hat mir der weitergeholfen vor allem wenn es knapp wurde in Mathe"
                 </p>
               </CardContent>
             </Card>
