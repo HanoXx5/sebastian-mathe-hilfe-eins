@@ -83,21 +83,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-500">
-            <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200 bg-white/50 backdrop-blur-sm rounded-full px-4 py-2">
-              <Users className="h-5 w-5 text-green-600" />
-              <span>10+ erfolgreiche Schüler</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200 bg-white/50 backdrop-blur-sm rounded-full px-4 py-2">
-              <Award className="h-5 w-5 text-yellow-600" />
-              <span>Erfahrener Nachhilfelehrer</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200 bg-white/50 backdrop-blur-sm rounded-full px-4 py-2">
-              <CheckCircle className="h-5 w-5 text-blue-600" />
-              <span>Individuelle Betreuung</span>
-            </div>
-          </div>
         </div>
       </section>
 
