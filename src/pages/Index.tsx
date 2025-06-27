@@ -273,8 +273,6 @@ const Index = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Kontakt aufnehmen</h3>
             <p className="text-gray-300 text-sm md:text-base">Bereit für bessere Noten? Lass uns sprechen!</p>
           </div>
-
-            {/* Contact Information */}
             <div className="bg-gray-800 rounded-lg p-6 md:p-8">
               <h4 className="text-lg md:text-xl font-semibold mb-6 text-center">Kontaktinformationen</h4>
               <div className="space-y-4 md:space-y-6">
