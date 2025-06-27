@@ -4,12 +4,12 @@ import React, { useState, useEffect } from 'react';
 const MathAnimation = () => {
   const equations = [
     "2 + 2 = 4",
-    "x² + y² = z²",
+    "x²+y²=z²",
     "d/dx(x²) = 2x",
-    "∫ x dx = x²/2 + C",
-    "lim(x→0) sin(x)/x = 1",
-    "e^(iπ) + 1 = 0",
-    "√(a² + b²) = c"
+    "∫x=x²/2+c",
+    "9 / 3 = 3",
+    "e^0 + 1 = 1",
+    "√(a²+b²)=c"
   ];
 
   const [currentEquation, setCurrentEquation] = useState(0);
