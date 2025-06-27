@@ -1,35 +1,51 @@
+// Make sure to run npm install @formspree/react
+// For more help visit https://formspr.ee/react-help
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Send } from 'lucide-react';
+function ContactForm() {
+  const [state, handleSubmit] = useForm("mzzgygov");
+  if (state.succeeded) {
+      return <p>Thanks for joining!</p>;
+  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="email">
+        Email Address
+      </label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+      />
+      <ValidationError
+        prefix="Email"
+        field="email"
+        errors={state.errors}
+      />
+      <textarea
+        id="message"
+        name="message"
+      />
+      <ValidationError
+        prefix="Message"
+        field="message"
+        errors={state.errors}
+      />
+      <button type="submit" disabled={state.submitting}>
+        Submit
+      </button>
+    </form>
+  );
+}
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+function App() {
+  return (
+    <ContactForm />
+  );
+}
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Create mailto link with form data
-    const mailtoLink = `mailto:s.zscherneck@web.de?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nNachricht:\n${formData.message}`
-    )}`;
-    window.location.href = mailtoLink;
-  };
-
+export default App;
   return (
     <Card className="bg-gray-800 border-gray-700">
       <CardHeader>

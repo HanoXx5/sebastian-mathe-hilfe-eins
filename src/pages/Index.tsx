@@ -6,6 +6,7 @@ import MathAnimation from "@/components/MathAnimation";
 import StarRating from "@/components/StarRating";
 import ContactForm from "@/components/ContactForm";
 
+const [state, handleSubmit] = useForm("mzzgygov");
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
