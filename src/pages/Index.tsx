@@ -201,11 +201,13 @@ const Index = () => {
     </div>
   </div>
 
-  <div className="mt-6 p-4 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-lg border border-emerald-400/30">
-    <p className="text-sm text-emerald-200">
-     💡 <strong>Hinweis:</strong> Die Stunden finden bei mir zu Hause in Egelsbach statt.
-     </p>
-   </div>
+   <div className="mt-8 md:col-span-2 lg:col-span-3">
+          <div className="p-4 bg-gradient-to-r from-blue-700/30 to-purple-700/30 rounded-lg border border-blue-600/50 shadow-md">
+            <p className="text-base md:text-lg text-white font-medium text-center">
+              💡 **Hinweis:** Die Stunden finden bei mir zu Hause in Egelsbach statt.
+            </p>
+          </div>
+        </div>
 </section>
 
       {/* Testimonials Section */}
