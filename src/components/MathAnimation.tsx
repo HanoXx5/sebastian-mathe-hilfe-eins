@@ -5,7 +5,7 @@ const MathAnimation = () => {
   const equations = [
     "2 + 2 = 4",
     "x²+y²=z²",
-    "d/dx(x²) = 2x",
+    "d/dx(x²)=2x",
     "∫x=x²/2+c",
     "9 / 3 = 3",
     "e^0 + 1 = 1",
