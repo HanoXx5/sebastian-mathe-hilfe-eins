@@ -1,4 +1,3 @@
-
 import { Calculator, Users, Award, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,13 +7,13 @@ import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+      <header className="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Calculator className="h-6 w-6 md:h-8 md:w-8 text-blue-600" />
-            <h1 className="text-lg md:text-2xl font-bold text-gray-900">Sebastian's Mathenachhilfe</h1>
+            <h1 className="text-lg md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Sebastian's Mathenachhilfe</h1>
           </div>
           <nav className="hidden md:flex space-x-6">
             <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors hover:scale-105 transform duration-200">Über mich</a>
@@ -31,20 +30,39 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-8 md:py-16 px-4">
-        <div className="max-w-6xl mx-auto">
+      {/* Hero Section with Math Animation Background */}
+      <section className="relative py-8 md:py-16 px-4 overflow-hidden">
+        {/* Background Math Animation */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none z-0">
+          <div className="absolute top-10 left-10 text-4xl md:text-6xl text-blue-500">
+            <MathAnimation />
+          </div>
+          <div className="absolute top-32 right-10 text-2xl md:text-4xl text-purple-500 opacity-60">
+            ∫ x dx = x²/2 + C
+          </div>
+          <div className="absolute bottom-20 left-20 text-3xl md:text-5xl text-indigo-500 opacity-40">
+            lim(x→0) sin(x)/x = 1
+          </div>
+          <div className="absolute bottom-32 right-20 text-2xl md:text-4xl text-pink-500 opacity-50">
+            e^(iπ) + 1 = 0
+          </div>
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-8 md:mb-12">
             <div className="flex justify-center order-1 md:order-1">
-              <img 
-                src="/lovable-uploads/d25fb8b4-469e-4c23-9b95-3e2864813d69.png" 
-                alt="Sebastian - Mathe Nachhilfelehrer" 
-                className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
-              />
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                <img 
+                  src="/lovable-uploads/d25fb8b4-469e-4c23-9b95-3e2864813d69.png" 
+                  alt="Sebastian - Mathe Nachhilfelehrer" 
+                  className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
+                />
+              </div>
             </div>
             <div className="text-center md:text-left order-2 md:order-2">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                Professionelle <span className="text-blue-600">Mathenachhilfe</span>
+                Professionelle <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Mathenachhilfe</span>
               </h2>
               <p className="text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
                 Hi, ich bin Sebastian! Ich helfe Schülern und Studenten dabei, ihre mathematischen Fähigkeiten zu verbessern. 
@@ -54,7 +72,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   onClick={() => window.location.href = 'tel:+491621992865'}
                 >
                   Jetzt Termin vereinbaren
@@ -62,7 +80,7 @@ const Index = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-blue-600 text-blue-600 hover:bg-blue-50 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300"
                   onClick={() => {
                     const section = document.getElementById("about");
                     if (section) {
@@ -76,21 +94,16 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Math Animation - moved here for better placement */}
-          <div className="mb-8 bg-white rounded-lg p-4 md:p-6 shadow-lg">
-            <MathAnimation />
-          </div>
-          
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-500">
-            <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200">
+            <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200 bg-white/50 backdrop-blur-sm rounded-full px-4 py-2">
               <Users className="h-5 w-5 text-green-600" />
               <span>10+ erfolgreiche Schüler</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200">
+            <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200 bg-white/50 backdrop-blur-sm rounded-full px-4 py-2">
               <Award className="h-5 w-5 text-yellow-600" />
               <span>Erfahrener Nachhilfelehrer</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200">
+            <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200 bg-white/50 backdrop-blur-sm rounded-full px-4 py-2">
               <CheckCircle className="h-5 w-5 text-blue-600" />
               <span>Individuelle Betreuung</span>
             </div>
@@ -99,7 +112,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-12 md:py-16 px-4 bg-white">
+      <section id="about" className="py-12 md:py-16 px-4 bg-gradient-to-r from-white via-blue-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="animate-fade-in">
@@ -144,17 +157,17 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-12 md:py-16 px-4 bg-gray-50">
+      <section id="services" className="py-12 md:py-16 px-4 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Mein Angebot</h3>
+            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">Mein Angebot</h3>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
               Individuell angepasste Nachhilfe für verschiedene Bildungsstufen und mathematische Bereiche
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-blue-50">
               <CardContent className="p-6">
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Calculator className="h-6 w-6 text-blue-600" />
@@ -172,7 +185,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-green-50">
               <CardContent className="p-6">
                 <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-green-600" />
@@ -189,7 +202,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 md:col-span-2 lg:col-span-1 bg-gradient-to-br from-white to-purple-50">
               <CardContent className="p-6">
                 <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Award className="h-6 w-6 text-purple-600" />
@@ -210,15 +223,15 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-12 md:py-16 px-4 bg-white">
+      <section id="testimonials" className="py-12 md:py-16 px-4 bg-gradient-to-r from-white via-purple-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Erfolgsgeschichten</h3>
+            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-4">Erfolgsgeschichten</h3>
             <p className="text-gray-600 text-sm md:text-base">Was meine Schüler über den Unterricht sagen</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <Card className="bg-blue-50 border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">L</div>
@@ -237,7 +250,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-green-50 border-green-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">S</div>
@@ -256,7 +269,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-purple-50 border-purple-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105 md:col-span-2 lg:col-span-1">
+            <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105 md:col-span-2 lg:col-span-1">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">E</div>
@@ -279,7 +292,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-12 md:py-16 px-4 bg-gray-900 text-white">
+      <section id="contact" className="py-12 md:py-16 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Kontakt aufnehmen</h3>
@@ -323,7 +336,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-gray-300 py-6 md:py-8 px-4">
+      <footer className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-gray-300 py-6 md:py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Calculator className="h-5 w-5 md:h-6 md:w-6 text-blue-400" />

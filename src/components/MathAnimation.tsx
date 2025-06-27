@@ -23,19 +23,19 @@ const MathAnimation = () => {
       if (displayedText.length < equation.length) {
         const timer = setTimeout(() => {
           setDisplayedText(equation.slice(0, displayedText.length + 1));
-        }, 100);
+        }, 150);
         return () => clearTimeout(timer);
       } else {
         const timer = setTimeout(() => {
           setIsTyping(false);
-        }, 2000);
+        }, 3000);
         return () => clearTimeout(timer);
       }
     } else {
       if (displayedText.length > 0) {
         const timer = setTimeout(() => {
           setDisplayedText(displayedText.slice(0, -1));
-        }, 50);
+        }, 75);
         return () => clearTimeout(timer);
       } else {
         setCurrentEquation((prev) => (prev + 1) % equations.length);
@@ -45,9 +45,9 @@ const MathAnimation = () => {
   }, [displayedText, isTyping, currentEquation, equations]);
 
   return (
-    <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 font-mono min-h-[2rem] md:min-h-[3rem] flex items-center justify-center">
+    <div className="font-bold font-mono flex items-center justify-center animate-pulse">
       {displayedText}
-      <span className="animate-pulse">|</span>
+      <span className="animate-pulse ml-1">|</span>
     </div>
   );
 };
