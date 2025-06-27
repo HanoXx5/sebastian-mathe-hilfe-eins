@@ -87,7 +87,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-12 md:py-16 px-4 bg-gradient-to-r from-white via-blue-50 to-white">
+      <section id="about" className="py-12 md:py-16 px-4 bg-gradient-to-r from-white via-blue-50 to-white pb-32">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="animate-fade-in">
@@ -202,7 +202,7 @@ const Index = () => {
       <div className="mt-8 md:col-span-2 lg:col-span-3"> {/* Passt sich über 2 oder 3 Spalten an */}
         <div className="p-4 bg-gradient-to-r from-blue-700/30 to-purple-700/30 rounded-lg border border-blue-600/50 shadow-md"> {/* Farben angepasst */}
           <p className="text-base md:text-lg text-white font-medium text-center"> {/* Hellerer Text, zentriert */}
-            💡 **Hinweis:** Die Stunden finden bei mir zu Hause in Egelsbach statt.
+            💡Hinweis: Die Stunden finden bei mir zu Hause in Egelsbach statt.
           </p>
         </div>
       </div>
@@ -212,7 +212,7 @@ const Index = () => {
 </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-12 md:py-16 px-4 bg-gradient-to-r from-white via-purple-50 to-white">
+      <section id="testimonials" className="py-12 md:py-16 px-4 bg-gradient-to-r from-white via-purple-50 to-white pt-32">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-4">Erfolgsgeschichten</h3>
