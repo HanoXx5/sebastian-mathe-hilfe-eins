@@ -86,8 +86,9 @@ const Index = () => {
         </div>
       </section>
 
+
       {/* About Section */}
-      <section id="about" className="py-12 md:py-16 px-4 bg-gradient-to-r from-white via-blue-50 to-white">
+      <section id="about" className="relative py-12 md:py-16 px-4 bg-gradient-to-r from-white via-blue-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="animate-fade-in">
@@ -121,7 +122,7 @@ const Index = () => {
                     <div className="text-blue-100 text-sm">Jahre Erfahrung</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold mb-2">2-13</div>
+                    <div className="text-2xl md::text-3xl font-bold mb-2">2-13</div>
                     <div className="text-blue-100 text-sm">Klassenstufen</div>
                   </div>
                 </div>
@@ -131,76 +132,107 @@ const Index = () => {
         </div>
       </section>
 
-{/* Services Section */}
-<section id="services" className="py-12 md:py-16 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-  <div className="max-w-6xl mx-auto">
-    <div className="text-center mb-12">
-      {/* Überschrift bleibt so, da sie auf dem dunklen Hintergrund gut sichtbar ist */}
-      <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">Mein Angebot</h3>
-      {/* Beschreibungstext bleibt so, da er auf dem dunklen Hintergrund gut lesbar ist */}
-      <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-base">
-        Individuell angepasste Nachhilfe für verschiedene Bildungsstufen und mathematische Bereiche
-      </p>
-    </div>
+      {/* WAVE DIVIDER: From About (Light) to Services (Dark) */}
+      <div className="relative w-full h-24 -mt-10 overflow-hidden z-10 md:-mt-16 lg:-mt-20"> {/* Negative Margin, um mit der Sektion darüber zu überlappen */}
+        <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          {/* Definiere den Gradienten für die Welle (von About-Endfarbe zu Services-Startfarbe) */}
+          <defs>
+            <linearGradient id="lightToDarkGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#E0F2FE" /> {/* blue-50 (end of about) */}
+              <stop offset="25%" stopColor="#bfdbfe" /> {/* blue-200 */}
+              <stop offset="50%" stopColor="#60a5fa" /> {/* blue-400 */}
+              <stop offset="75%" stopColor="#1e3a8a" /> {/* blue-900 */}
+              <stop offset="100%" stopColor="#111827" /> {/* gray-900 (start of services) */}
+            </linearGradient>
+          </defs>
+          {/* Path für die unsymmetrische Welle */}
+          <path fill="url(#lightToDarkGradient)" d="M0,50 C200,80 400,20 600,60 800,90 1000,30 L1000,100 L0,100 Z"></path>
+        </svg>
+      </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-      {/* Card 1: Schülernachhilfe - HELLERER HINTERGRUND */}
-      <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-blue-100 border border-blue-300"> {/* Heller Gradient, passender Border */}
-        <CardContent className="p-6">
-          <div className="bg-blue-200 w-12 h-12 rounded-lg flex items-center justify-center mb-4"> {/* Hellerer Icon-Hintergrund */}
-            <Calculator className="h-6 w-6 text-blue-600" /> {/* Blaue Icons passend zum Hintergrund */}
+      {/* Services Section */}
+      <section id="services" className="py-12 md:py-16 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">Mein Angebot</h3>
+            <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-base">
+              Individuell angepasste Nachhilfe für verschiedene Bildungsstufen und mathematische Bereiche
+            </p>
           </div>
-          <h4 className="text-lg md:text-xl font-semibold mb-3 text-gray-900">Schülernachhilfe</h4> {/* Dunklerer Titel */}
-          <p className="text-gray-700 mb-4 text-sm md:text-base"> {/* Dunklerer Text für gute Lesbarkeit auf hellem Grund */}
-            Unterstützung für Schüler aller Klassenstufen - von Grundlagen bis zum Abitur
-          </p>
-          <ul className="space-y-2 text-sm text-gray-600"> {/* Dunklere Listenpunkte */}
-            <li>• Grundrechenarten</li>
-            <li>• Algebra & Geometrie</li>
-            <li>• Funktionen & Analysis</li>
-            <li>• Prüfungsvorbereitung</li>
-          </ul>
-        </CardContent>
-      </Card>
 
-      {/* Card 2: Studentennachhilfe - HELLERER HINTERGRUND */}
-      <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-green-100 border border-green-300"> {/* Heller Gradient, passender Border */}
-        <CardContent className="p-6">
-          <div className="bg-green-200 w-12 h-12 rounded-lg flex items-center justify-center mb-4"> {/* Hellerer Icon-Hintergrund */}
-            <Users className="h-6 w-6 text-green-600" /> {/* Grüne Icons */}
-          </div>
-          <h4 className="text-lg md:text-xl font-semibold mb-3 text-gray-900">Studentennachhilfe</h4> {/* Dunklerer Titel */}
-          <p className="text-gray-700 mb-4 text-sm md:text-base"> {/* Dunklerer Text */}
-            Unterstützung für Studierende in mathematischen Grundlagenfächern
-          </p>
-          <ul className="space-y-2 text-sm text-gray-600"> {/* Dunklere Listenpunkte */}
-            <li>• Lineare Algebra</li>
-            <li>• Analysis I & II</li>
-            <li>• Klausurvorbereitung</li>
-          </ul>
-        </CardContent>
-      </Card>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-blue-100 border border-blue-300">
+              <CardContent className="p-6">
+                <div className="bg-blue-200 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Calculator className="h-6 w-6 text-blue-600" />
+                </div>
+                <h4 className="text-lg md:text-xl font-semibold mb-3 text-gray-900">Schülernachhilfe</h4>
+                <p className="text-gray-700 mb-4 text-sm md:text-base">
+                  Unterstützung für Schüler aller Klassenstufen - von Grundlagen bis zum Abitur
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Grundrechenarten</li>
+                  <li>• Algebra & Geometrie</li>
+                  <li>• Funktionen & Analysis</li>
+                  <li>• Prüfungsvorbereitung</li>
+                </ul>
+              </CardContent>
+            </Card>
 
-      {/* Card 3: Intensivkurse - HELLERER HINTERGRUND */}
-      <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 md:col-span-2 lg:col-span-1 bg-gradient-to-br from-white to-purple-100 border border-purple-300"> {/* Heller Gradient, passender Border */}
-        <CardContent className="p-6">
-          <div className="bg-purple-200 w-12 h-12 rounded-lg flex items-center justify-center mb-4"> {/* Hellerer Icon-Hintergrund */}
-            <Award className="h-6 w-6 text-purple-600" /> {/* Lila Icons */}
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-green-100 border border-green-300">
+              <CardContent className="p-6">
+                <div className="bg-green-200 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-green-600" />
+                </div>
+                <h4 className="text-lg md:text-xl font-semibold mb-3 text-gray-900">Studentennachhilfe</h4>
+                <p className="text-gray-700 mb-4 text-sm md:text-base">
+                  Unterstützung für Studierende in mathematischen Grundlagenfächern
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Lineare Algebra</li>
+                  <li>• Analysis I & II</li>
+                  <li>• Klausurvorbereitung</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 md:col-span-2 lg:col-span-1 bg-gradient-to-br from-white to-purple-100 border border-purple-300">
+              <CardContent className="p-6">
+                <div className="bg-purple-200 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Award className="h-6 w-6 text-purple-600" />
+                </div>
+                <h4 className="text-lg md:text-xl font-semibold mb-3 text-gray-900">Intensivkurse</h4>
+                <p className="text-gray-700 mb-4 text-sm md:text-base">
+                  Gezielte Vorbereitung auf wichtige Prüfungen und Klausuren
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Abitur-Vorbereitung</li>
+                  <li>• Nachprüfungen</li>
+                  <li>• Crashkurse</li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
-          <h4 className="text-lg md:text-xl font-semibold mb-3 text-gray-900">Intensivkurse</h4> {/* Dunklerer Titel */}
-          <p className="text-gray-700 mb-4 text-sm md:text-base"> {/* Dunklerer Text */}
-            Gezielte Vorbereitung auf wichtige Prüfungen und Klausuren
-          </p>
-          <ul className="space-y-2 text-sm text-gray-600"> {/* Dunklere Listenpunkte */}
-            <li>• Abitur-Vorbereitung</li>
-            <li>• Nachprüfungen</li>
-            <li>• Crashkurse</li>
-          </ul>
-        </CardContent>
-      </Card>
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
+
+      {/* WAVE DIVIDER: From Services (Dark) to Testimonials (Light) */}
+      <div className="relative w-full h-24 -mt-10 overflow-hidden z-10 md:-mt-16 lg:-mt-20"> {/* Negative Margin, um mit der Sektion darüber zu überlappen */}
+        <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          {/* Definiere den Gradienten für die Welle (von Services-Endfarbe zu Testimonials-Startfarbe) */}
+          <defs>
+            <linearGradient id="darkToLightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#4c1d95" /> {/* purple-900 (end of services) */}
+              <stop offset="25%" stopColor="#8b5cf6" /> {/* purple-500 */}
+              <stop offset="50%" stopColor="#c084fc" /> {/* purple-400 */}
+              <stop offset="75%" stopColor="#f3e8ff" /> {/* purple-50 (start of testimonials) */}
+              <stop offset="100%" stopColor="#ffffff" /> {/* white */}
+            </linearGradient>
+          </defs>
+          {/* Path für die unsymmetrische Welle (umgekehrte Form der oberen Welle) */}
+          <path fill="url(#darkToLightGradient)" d="M0,30 C200,0 400,70 600,40 800,10 1000,60 L1000,0 L0,0 Z"></path>
+        </svg>
+      </div>
 
       {/* Testimonials Section */}
       <section id="testimonials" className="py-12 md:py-16 px-4 bg-gradient-to-r from-white via-purple-50 to-white">
@@ -209,7 +241,7 @@ const Index = () => {
             <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-4">Erfolgsgeschichten</h3>
             <p className="text-gray-600 text-sm md:text-base">Was meine Schüler über den Unterricht sagen</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-6">
@@ -221,7 +253,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="mb-3">
-                  <StarRating rating={5} />
+                  {/* <StarRating rating={5} /> */}
                   <p className="text-xs text-gray-500 mt-1">Google Bewertung</p>
                 </div>
                 <p className="text-gray-700 italic text-sm md:text-base">
@@ -240,7 +272,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="mb-3">
-                  <StarRating rating={5} />
+                  {/* <StarRating rating={5} /> */}
                   <p className="text-xs text-gray-500 mt-1">Google Bewertung</p>
                 </div>
                 <p className="text-gray-700 italic text-sm md:text-base">
@@ -259,7 +291,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="mb-3">
-                  <StarRating rating={5} />
+                  {/* <StarRating rating={5} /> */}
                   <p className="text-xs text-gray-500 mt-1">Google Bewertung</p>
                 </div>
                 <p className="text-gray-700 italic text-sm md:text-base">
