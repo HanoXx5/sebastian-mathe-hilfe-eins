@@ -5,8 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import MathAnimation from "@/components/MathAnimation";
 import StarRating from "@/components/StarRating";
 import ContactForm from "@/components/ContactForm";
-import React from 'react';
-import ParticlesBackground from 'src/components/ui/ParticlesBackround.tsx';
 
 const Index = () => {
   return (
@@ -89,11 +87,8 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative py-12 md:py-16 px-4 bg-gradient-to-r from-white via-blue-50 to-white overflow-hidden">
-       <div className="absolute inset-0 z-0 pointer-events-none">
-          <ParticlesBackground />
-        </div>
-        <div className="max-w-6xl mx-auto relative z-10">
+      <section id="about" className="py-12 md:py-16 px-4 bg-gradient-to-r from-white via-blue-50 to-white">
+        <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="animate-fade-in">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Über mich</h3>
