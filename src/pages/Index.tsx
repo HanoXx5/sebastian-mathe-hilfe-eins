@@ -293,7 +293,6 @@ const Index = () => {
 
             </div>
           </div>
-        </div>
       </section>
 
       {/* Footer */}
