@@ -1,3 +1,4 @@
+
 import { Calculator, Users, Award, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -32,19 +33,26 @@ const Index = () => {
 
       {/* Hero Section with Math Animation Background */}
       <section className="relative py-8 md:py-16 px-4 overflow-hidden">
-        {/* Background Math Animation */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none z-0">
-          <div className="absolute top-10 left-10 text-4xl md:text-6xl text-blue-500">
+        {/* Background Math Animation - Large and Centered */}
+        <div className="absolute inset-0 opacity-15 pointer-events-none z-0 flex items-center justify-center">
+          <div className="text-6xl md:text-8xl lg:text-9xl text-blue-500/60 font-mono">
             <MathAnimation />
           </div>
-          <div className="absolute top-32 right-10 text-2xl md:text-4xl text-purple-500 opacity-60">
+        </div>
+
+        {/* Additional Background Formulas - Larger and Better Positioned */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none z-0">
+          <div className="absolute top-1/4 left-1/4 text-5xl md:text-7xl text-purple-500/70 font-mono transform -rotate-12">
             ∫ x dx = x²/2 + C
           </div>
-          <div className="absolute bottom-20 left-20 text-3xl md:text-5xl text-indigo-500 opacity-40">
+          <div className="absolute top-3/4 right-1/4 text-4xl md:text-6xl text-indigo-500/60 font-mono transform rotate-12">
             lim(x→0) sin(x)/x = 1
           </div>
-          <div className="absolute bottom-32 right-20 text-2xl md:text-4xl text-pink-500 opacity-50">
+          <div className="absolute bottom-1/4 left-1/3 text-5xl md:text-7xl text-pink-500/70 font-mono transform -rotate-6">
             e^(iπ) + 1 = 0
+          </div>
+          <div className="absolute top-1/2 right-1/3 text-4xl md:text-6xl text-green-500/60 font-mono transform rotate-6">
+            √(a² + b²) = c
           </div>
         </div>
 
