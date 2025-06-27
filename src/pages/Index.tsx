@@ -71,7 +71,7 @@ const Index = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-600 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-600 hover:border-purple-600 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300"
                   onClick={() => {
                     const section = document.getElementById("about");
                     if (section) {
