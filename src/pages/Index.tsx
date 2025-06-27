@@ -40,21 +40,7 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Additional Background Formulas - Larger and Better Positioned */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none z-0">
-          <div className="absolute top-1/4 left-1/4 text-5xl md:text-7xl text-purple-500/70 font-mono transform -rotate-12">
-            ∫ x dx = x²/2 + C
-          </div>
-          <div className="absolute top-3/4 right-1/4 text-4xl md:text-6xl text-indigo-500/60 font-mono transform rotate-12">
-            lim(x→0) sin(x)/x = 1
-          </div>
-          <div className="absolute bottom-1/4 left-1/3 text-5xl md:text-7xl text-pink-500/70 font-mono transform -rotate-6">
-            e^(iπ) + 1 = 0
-          </div>
-          <div className="absolute top-1/2 right-1/3 text-4xl md:text-6xl text-green-500/60 font-mono transform rotate-6">
-            √(a² + b²) = c
-          </div>
-        </div>
+       /
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-8 md:mb-12">
