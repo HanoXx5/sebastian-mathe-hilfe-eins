@@ -1,22 +1,26 @@
+
 import { Calculator, Users, Award, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import MathAnimation from "@/components/MathAnimation";
+import StarRating from "@/components/StarRating";
+import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Header */}
-      <header className="bg-white shadow-sm">
+      <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Calculator className="h-8 w-8 text-blue-600" />
             <h1 className="text-2xl font-bold text-gray-900">Sebastian's Mathenachhilfe</h1>
           </div>
           <nav className="hidden md:flex space-x-6">
-            <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">Über mich</a>
-            <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">Angebot</a>
-            <a href="#testimonials" className="text-gray-600 hover:text-blue-600 transition-colors">Erfolge</a>
-            <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Kontakt</a>
+            <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors hover:scale-105 transform duration-200">Über mich</a>
+            <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors hover:scale-105 transform duration-200">Angebot</a>
+            <a href="#testimonials" className="text-gray-600 hover:text-blue-600 transition-colors hover:scale-105 transform duration-200">Erfolge</a>
+            <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors hover:scale-105 transform duration-200">Kontakt</a>
           </nav>
         </div>
       </header>
@@ -29,21 +33,27 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/d25fb8b4-469e-4c23-9b95-3e2864813d69.png" 
                 alt="Sebastian - Mathe Nachhilfelehrer" 
-                className="w-64 h-64 rounded-full object-cover shadow-xl border-4 border-white"
+                className="w-80 h-80 rounded-full object-cover shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="text-center md:text-left">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
                 Professionelle <span className="text-blue-600">Mathenachhilfe</span>
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Hi, ich bin Sebastian! Ich helfe Schülern und Studenten dabei, ihre mathematischen Fähigkeiten zu verbessern. 
                 Mit individueller Betreuung und bewährten Methoden zum Erfolg!
               </p>
+              
+              {/* Math Animation */}
+              <div className="mb-8 bg-white rounded-lg p-6 shadow-lg">
+                <MathAnimation />
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3"
+                  className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   onClick={() => window.location.href = 'tel:+491621992865'}
                 >
                   Jetzt Termin vereinbaren
@@ -51,7 +61,7 @@ const Index = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8 py-3"
+                  className="border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8 py-3 transform hover:scale-105 transition-all duration-300"
                   onClick={() => {
                     const section = document.getElementById("about");
                     if (section) {
@@ -66,15 +76,15 @@ const Index = () => {
           </div>
           
           <div className="flex justify-center space-x-8 text-sm text-gray-500">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200">
               <Users className="h-5 w-5 text-green-600" />
               <span>10+ erfolgreiche Schüler</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200">
               <Award className="h-5 w-5 text-yellow-600" />
               <span>Erfahrener Nachhilfelehrer</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200">
               <CheckCircle className="h-5 w-5 text-blue-600" />
               <span>Individuelle Betreuung</span>
             </div>
@@ -86,7 +96,7 @@ const Index = () => {
       <section id="about" className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="animate-fade-in">
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Über mich</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Ich bin Sebastian, 20 Jahre alt, und ich helfe dir, Mathe endlich zu verstehen, egal ob du gerade am Anfang stehst oder dich auf dein Abitur vorbereitest.
@@ -95,14 +105,14 @@ const Index = () => {
                 Mit 15 Punkten im Mathe-Leistungskurs und einem Abiturdurchschnitt von 1,2 bringe ich nicht nur das nötige Fachwissen mit, sondern auch die Erfahrung: Ich habe bereits über 10 Schüler*innen aller Klassenstufen erfolgreich begleitet – von der 1. Klasse bis zum Abitur. Auch Studierende mit Mathematik im Nebenfach unterstütze ich gerne und effektiv.
               </p>
               <div className="flex flex-wrap gap-3">
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Algebra</span>
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Geometrie</span>
-                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Analysis</span>
-                <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Statistik</span>
+                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm hover:bg-blue-200 transition-colors duration-200">Algebra</span>
+                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200 transition-colors duration-200">Geometrie</span>
+                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm hover:bg-purple-200 transition-colors duration-200">Analysis</span>
+                <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm hover:bg-orange-200 transition-colors duration-200">Statistik</span>
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg p-8 text-white">
+              <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg p-8 text-white transform hover:scale-105 transition-transform duration-300 shadow-xl">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
                     <div className="text-3xl font-bold mb-2">10+</div>
@@ -138,7 +148,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
               <CardContent className="p-6">
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Calculator className="h-6 w-6 text-blue-600" />
@@ -156,7 +166,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
               <CardContent className="p-6">
                 <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-green-600" />
@@ -173,7 +183,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
               <CardContent className="p-6">
                 <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Award className="h-6 w-6 text-purple-600" />
@@ -202,7 +212,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-blue-50 border-blue-200">
+            <Card className="bg-blue-50 border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">L</div>
@@ -211,20 +221,28 @@ const Index = () => {
                     <div className="text-sm text-gray-600">Gymnasium</div>
                   </div>
                 </div>
+                <div className="mb-3">
+                  <StarRating rating={5} />
+                  <p className="text-xs text-gray-500 mt-1">Google Bewertung</p>
+                </div>
                 <p className="text-gray-700 italic">
                   "Sebastian hat mir geholfen, von 4 auf 9 Punkte zu kommen, innerhalb von ein paar Monaten!"
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-green-50 border-green-200">
+            <Card className="bg-green-50 border-green-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">M</div>
+                  <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">S</div>
                   <div className="ml-3">
                     <div className="font-semibold">Sarah, 2. und 5. Klasse</div>
                     <div className="text-sm text-gray-600">Grundschule</div>
                   </div>
+                </div>
+                <div className="mb-3">
+                  <StarRating rating={5} />
+                  <p className="text-xs text-gray-500 mt-1">Google Bewertung</p>
                 </div>
                 <p className="text-gray-700 italic">
                   "Meine beiden Söhne gehen sehr gerne zu Sebastian und üben zusammen mit ihm die aktuellen Matheaufgaben."
@@ -232,17 +250,21 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-purple-50 border-purple-200">
+            <Card className="bg-purple-50 border-purple-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">A</div>
+                  <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">E</div>
                   <div className="ml-3">
                     <div className="font-semibold">Emily, 12. Klasse</div>
                     <div className="text-sm text-gray-600">Fach-Abitur</div>
                   </div>
                 </div>
+                <div className="mb-3">
+                  <StarRating rating={5} />
+                  <p className="text-xs text-gray-500 mt-1">Google Bewertung</p>
+                </div>
                 <p className="text-gray-700 italic">
-                  "Sebastian [...] hat mir unglaublich gut geholfen und durch ihn hab ich mich in Mathe auch nicht so verzweifelt gefühlt. [...]  Ich kann Sebastian als Nachhilfelehrer nur wärmstens weiterempfehlen."
+                  "Sebastian [...] hat mir unglaublich gut geholfen und durch ihn hab ich mich in Mathe auch nicht so verzweifelt gefühlt. [...] Ich kann Sebastian als Nachhilfelehrer nur wärmstens weiterempfehlen."
                 </p>
               </CardContent>
             </Card>
@@ -258,19 +280,23 @@ const Index = () => {
             <p className="text-gray-300">Bereit für bessere Noten? Lass uns sprechen!</p>
           </div>
           
-          <div className="max-w-2xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            {/* Contact Form */}
+            <ContactForm />
+            
+            {/* Contact Information */}
             <div className="bg-gray-800 rounded-lg p-8">
               <h4 className="text-xl font-semibold mb-6 text-center">Kontaktinformationen</h4>
               <div className="space-y-6">
-                <div className="flex items-center justify-center space-x-4">
+                <div className="flex items-center space-x-4 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-300">
                   <Phone className="h-6 w-6 text-blue-400" />
                   <span className="text-lg">+49 162 1992865</span>
                 </div>
-                <div className="flex items-center justify-center space-x-4">
+                <div className="flex items-center space-x-4 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-300">
                   <Mail className="h-6 w-6 text-blue-400" />
-                  <span className="text-lg">s.zscherneck[at]web.de</span>
+                  <span className="text-lg">s.zscherneck@web.de</span>
                 </div>
-                <div className="flex items-center justify-center space-x-4">
+                <div className="flex items-center space-x-4 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-300">
                   <MapPin className="h-6 w-6 text-blue-400" />
                   <span className="text-lg text-center">Verfügbar für Präsenzunterricht in Egelsbach</span>
                 </div>
@@ -279,7 +305,7 @@ const Index = () => {
               <div className="mt-8 text-center">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3"
+                  className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   onClick={() => window.location.href = 'tel:+491621992865'}
                 >
                   Jetzt anrufen
