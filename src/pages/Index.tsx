@@ -273,11 +273,7 @@ const Index = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Kontakt aufnehmen</h3>
             <p className="text-gray-300 text-sm md:text-base">Bereit für bessere Noten? Lass uns sprechen!</p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
-            {/* Contact Form */}
-            <ContactForm />
-            
+
             {/* Contact Information */}
             <div className="bg-gray-800 rounded-lg p-6 md:p-8">
               <h4 className="text-lg md:text-xl font-semibold mb-6 text-center">Kontaktinformationen</h4>
@@ -296,15 +292,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="mt-6 md:mt-8 text-center">
-                <Button
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full md:w-auto"
-                  onClick={() => window.location.href = 'tel:+491621992865'}
-                >
-                  Jetzt anrufen
-                </Button>
-              </div>
+
             </div>
           </div>
         </div>
