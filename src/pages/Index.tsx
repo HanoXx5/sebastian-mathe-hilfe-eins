@@ -201,9 +201,11 @@ const Index = () => {
     </div>
   </div>
 
-  <button class="bg-white text-gray-800 font-semibold py-2 px-4 rounded shadow hover:bg-gray-100 transition">
-    Hinweis
-  </button>
+  <div className="mt-6 p-4 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-lg border border-emerald-400/30">
+    <p className="text-sm text-emerald-200">
+     💡 <strong>Hinweis:</strong> Die Stunden finden bei mir zu Hause in Egelsbach statt.
+     </p>
+   </div>
 </section>
 
       {/* Testimonials Section */}
