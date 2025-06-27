@@ -13,8 +13,8 @@ const Index = () => {
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Calculator className="h-8 w-8 text-blue-600" />
-            <h1 className="text-2xl font-bold text-gray-900">Sebastian's Mathenachhilfe</h1>
+            <Calculator className="h-6 w-6 md:h-8 md:w-8 text-blue-600" />
+            <h1 className="text-lg md:text-2xl font-bold text-gray-900">Sebastian's Mathenachhilfe</h1>
           </div>
           <nav className="hidden md:flex space-x-6">
             <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors hover:scale-105 transform duration-200">Über mich</a>
@@ -22,38 +22,39 @@ const Index = () => {
             <a href="#testimonials" className="text-gray-600 hover:text-blue-600 transition-colors hover:scale-105 transform duration-200">Erfolge</a>
             <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors hover:scale-105 transform duration-200">Kontakt</a>
           </nav>
+          {/* Mobile Menu Button */}
+          <button className="md:hidden p-2">
+            <div className="w-6 h-0.5 bg-gray-600 mb-1"></div>
+            <div className="w-6 h-0.5 bg-gray-600 mb-1"></div>
+            <div className="w-6 h-0.5 bg-gray-600"></div>
+          </button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 px-4">
+      <section className="py-8 md:py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center mb-12">
-            <div className="flex justify-center md:justify-start">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-8 md:mb-12">
+            <div className="flex justify-center order-1 md:order-1">
               <img 
                 src="/lovable-uploads/d25fb8b4-469e-4c23-9b95-3e2864813d69.png" 
                 alt="Sebastian - Mathe Nachhilfelehrer" 
-                className="w-80 h-80 rounded-full object-cover shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
+                className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+            <div className="text-center md:text-left order-2 md:order-2">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
                 Professionelle <span className="text-blue-600">Mathenachhilfe</span>
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
                 Hi, ich bin Sebastian! Ich helfe Schülern und Studenten dabei, ihre mathematischen Fähigkeiten zu verbessern. 
                 Mit individueller Betreuung und bewährten Methoden zum Erfolg!
               </p>
               
-              {/* Math Animation */}
-              <div className="mb-8 bg-white rounded-lg p-6 shadow-lg">
-                <MathAnimation />
-              </div>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="bg-blue-600 hover:bg-blue-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   onClick={() => window.location.href = 'tel:+491621992865'}
                 >
                   Jetzt Termin vereinbaren
@@ -61,7 +62,7 @@ const Index = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8 py-3 transform hover:scale-105 transition-all duration-300"
+                  className="border-blue-600 text-blue-600 hover:bg-blue-50 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300"
                   onClick={() => {
                     const section = document.getElementById("about");
                     if (section) {
@@ -75,16 +76,21 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="flex justify-center space-x-8 text-sm text-gray-500">
-            <div className="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200">
+          {/* Math Animation - moved here for better placement */}
+          <div className="mb-8 bg-white rounded-lg p-4 md:p-6 shadow-lg">
+            <MathAnimation />
+          </div>
+          
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-500">
+            <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200">
               <Users className="h-5 w-5 text-green-600" />
               <span>10+ erfolgreiche Schüler</span>
             </div>
-            <div className="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200">
+            <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200">
               <Award className="h-5 w-5 text-yellow-600" />
               <span>Erfahrener Nachhilfelehrer</span>
             </div>
-            <div className="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200">
+            <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200">
               <CheckCircle className="h-5 w-5 text-blue-600" />
               <span>Individuelle Betreuung</span>
             </div>
@@ -93,18 +99,18 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 px-4 bg-white">
+      <section id="about" className="py-12 md:py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="animate-fade-in">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Über mich</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Über mich</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
                 Ich bin Sebastian, 20 Jahre alt, und ich helfe dir, Mathe endlich zu verstehen, egal ob du gerade am Anfang stehst oder dich auf dein Abitur vorbereitest.
               </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
                 Mit 15 Punkten im Mathe-Leistungskurs und einem Abiturdurchschnitt von 1,2 bringe ich nicht nur das nötige Fachwissen mit, sondern auch die Erfahrung: Ich habe bereits über 10 Schüler*innen aller Klassenstufen erfolgreich begleitet – von der 1. Klasse bis zum Abitur. Auch Studierende mit Mathematik im Nebenfach unterstütze ich gerne und effektiv.
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                 <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm hover:bg-blue-200 transition-colors duration-200">Algebra</span>
                 <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200 transition-colors duration-200">Geometrie</span>
                 <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm hover:bg-purple-200 transition-colors duration-200">Analysis</span>
@@ -112,23 +118,23 @@ const Index = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg p-8 text-white transform hover:scale-105 transition-transform duration-300 shadow-xl">
-                <div className="grid grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg p-6 md:p-8 text-white transform hover:scale-105 transition-transform duration-300 shadow-xl">
+                <div className="grid grid-cols-2 gap-4 md:gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2">10+</div>
-                    <div className="text-blue-100">Erfolgreiche Schüler</div>
+                    <div className="text-2xl md:text-3xl font-bold mb-2">10+</div>
+                    <div className="text-blue-100 text-sm">Erfolgreiche Schüler</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2">kostenlos!</div>
-                    <div className="text-blue-100">1. Stunde</div>
+                    <div className="text-2xl md:text-3xl font-bold mb-2">kostenlos!</div>
+                    <div className="text-blue-100 text-sm">1. Stunde</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2">2+</div>
-                    <div className="text-blue-100">Jahre Erfahrung</div>
+                    <div className="text-2xl md:text-3xl font-bold mb-2">2+</div>
+                    <div className="text-blue-100 text-sm">Jahre Erfahrung</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2">2-13</div>
-                    <div className="text-blue-100">Klassenstufen</div>
+                    <div className="text-2xl md:text-3xl font-bold mb-2">2-13</div>
+                    <div className="text-blue-100 text-sm">Klassenstufen</div>
                   </div>
                 </div>
               </div>
@@ -138,23 +144,23 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 px-4 bg-gray-50">
+      <section id="services" className="py-12 md:py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Mein Angebot</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Mein Angebot</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
               Individuell angepasste Nachhilfe für verschiedene Bildungsstufen und mathematische Bereiche
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
               <CardContent className="p-6">
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Calculator className="h-6 w-6 text-blue-600" />
                 </div>
-                <h4 className="text-xl font-semibold mb-3">Schülernachhilfe</h4>
-                <p className="text-gray-600 mb-4">
+                <h4 className="text-lg md:text-xl font-semibold mb-3">Schülernachhilfe</h4>
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
                   Unterstützung für Schüler aller Klassenstufen - von Grundlagen bis zum Abitur
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
@@ -171,8 +177,8 @@ const Index = () => {
                 <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-green-600" />
                 </div>
-                <h4 className="text-xl font-semibold mb-3">Studentennachhilfe</h4>
-                <p className="text-gray-600 mb-4">
+                <h4 className="text-lg md:text-xl font-semibold mb-3">Studentennachhilfe</h4>
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
                   Unterstützung für Studierende in mathematischen Grundlagenfächern
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
@@ -183,13 +189,13 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
               <CardContent className="p-6">
                 <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Award className="h-6 w-6 text-purple-600" />
                 </div>
-                <h4 className="text-xl font-semibold mb-3">Intensivkurse</h4>
-                <p className="text-gray-600 mb-4">
+                <h4 className="text-lg md:text-xl font-semibold mb-3">Intensivkurse</h4>
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
                   Gezielte Vorbereitung auf wichtige Prüfungen und Klausuren
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
@@ -204,28 +210,28 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-16 px-4 bg-white">
+      <section id="testimonials" className="py-12 md:py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Erfolgsgeschichten</h3>
-            <p className="text-gray-600">Was meine Schüler über den Unterricht sagen</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Erfolgsgeschichten</h3>
+            <p className="text-gray-600 text-sm md:text-base">Was meine Schüler über den Unterricht sagen</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <Card className="bg-blue-50 border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">L</div>
                   <div className="ml-3">
-                    <div className="font-semibold">Lilian, 12. Klasse</div>
-                    <div className="text-sm text-gray-600">Gymnasium</div>
+                    <div className="font-semibold text-sm md:text-base">Lilian, 12. Klasse</div>
+                    <div className="text-xs md:text-sm text-gray-600">Gymnasium</div>
                   </div>
                 </div>
                 <div className="mb-3">
                   <StarRating rating={5} />
                   <p className="text-xs text-gray-500 mt-1">Google Bewertung</p>
                 </div>
-                <p className="text-gray-700 italic">
+                <p className="text-gray-700 italic text-sm md:text-base">
                   "Sebastian hat mir geholfen, von 4 auf 9 Punkte zu kommen, innerhalb von ein paar Monaten!"
                 </p>
               </CardContent>
@@ -236,34 +242,34 @@ const Index = () => {
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">S</div>
                   <div className="ml-3">
-                    <div className="font-semibold">Sarah, 2. und 5. Klasse</div>
-                    <div className="text-sm text-gray-600">Grundschule</div>
+                    <div className="font-semibold text-sm md:text-base">Sarah, 2. und 5. Klasse</div>
+                    <div className="text-xs md:text-sm text-gray-600">Grundschule</div>
                   </div>
                 </div>
                 <div className="mb-3">
                   <StarRating rating={5} />
                   <p className="text-xs text-gray-500 mt-1">Google Bewertung</p>
                 </div>
-                <p className="text-gray-700 italic">
+                <p className="text-gray-700 italic text-sm md:text-base">
                   "Meine beiden Söhne gehen sehr gerne zu Sebastian und üben zusammen mit ihm die aktuellen Matheaufgaben."
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-purple-50 border-purple-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <Card className="bg-purple-50 border-purple-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105 md:col-span-2 lg:col-span-1">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">E</div>
                   <div className="ml-3">
-                    <div className="font-semibold">Emily, 12. Klasse</div>
-                    <div className="text-sm text-gray-600">Fach-Abitur</div>
+                    <div className="font-semibold text-sm md:text-base">Emily, 12. Klasse</div>
+                    <div className="text-xs md:text-sm text-gray-600">Fach-Abitur</div>
                   </div>
                 </div>
                 <div className="mb-3">
                   <StarRating rating={5} />
                   <p className="text-xs text-gray-500 mt-1">Google Bewertung</p>
                 </div>
-                <p className="text-gray-700 italic">
+                <p className="text-gray-700 italic text-sm md:text-base">
                   "Sebastian [...] hat mir unglaublich gut geholfen und durch ihn hab ich mich in Mathe auch nicht so verzweifelt gefühlt. [...] Ich kann Sebastian als Nachhilfelehrer nur wärmstens weiterempfehlen."
                 </p>
               </CardContent>
@@ -273,39 +279,39 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 px-4 bg-gray-900 text-white">
+      <section id="contact" className="py-12 md:py-16 px-4 bg-gray-900 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Kontakt aufnehmen</h3>
-            <p className="text-gray-300">Bereit für bessere Noten? Lass uns sprechen!</p>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Kontakt aufnehmen</h3>
+            <p className="text-gray-300 text-sm md:text-base">Bereit für bessere Noten? Lass uns sprechen!</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
             {/* Contact Form */}
             <ContactForm />
             
             {/* Contact Information */}
-            <div className="bg-gray-800 rounded-lg p-8">
-              <h4 className="text-xl font-semibold mb-6 text-center">Kontaktinformationen</h4>
-              <div className="space-y-6">
+            <div className="bg-gray-800 rounded-lg p-6 md:p-8">
+              <h4 className="text-lg md:text-xl font-semibold mb-6 text-center">Kontaktinformationen</h4>
+              <div className="space-y-4 md:space-y-6">
                 <div className="flex items-center space-x-4 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-300">
-                  <Phone className="h-6 w-6 text-blue-400" />
-                  <span className="text-lg">+49 162 1992865</span>
+                  <Phone className="h-5 w-5 md:h-6 md:w-6 text-blue-400" />
+                  <span className="text-base md:text-lg">+49 162 1992865</span>
                 </div>
                 <div className="flex items-center space-x-4 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-300">
-                  <Mail className="h-6 w-6 text-blue-400" />
-                  <span className="text-lg">s.zscherneck@web.de</span>
+                  <Mail className="h-5 w-5 md:h-6 md:w-6 text-blue-400" />
+                  <span className="text-base md:text-lg break-all">s.zscherneck@web.de</span>
                 </div>
                 <div className="flex items-center space-x-4 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-300">
-                  <MapPin className="h-6 w-6 text-blue-400" />
-                  <span className="text-lg text-center">Verfügbar für Präsenzunterricht in Egelsbach</span>
+                  <MapPin className="h-5 w-5 md:h-6 md:w-6 text-blue-400 flex-shrink-0" />
+                  <span className="text-base md:text-lg text-center">Verfügbar für Präsenzunterricht in Egelsbach</span>
                 </div>
               </div>
               
-              <div className="mt-8 text-center">
+              <div className="mt-6 md:mt-8 text-center">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="bg-blue-600 hover:bg-blue-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full md:w-auto"
                   onClick={() => window.location.href = 'tel:+491621992865'}
                 >
                   Jetzt anrufen
@@ -317,13 +323,13 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-gray-300 py-8 px-4">
+      <footer className="bg-gray-800 text-gray-300 py-6 md:py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <Calculator className="h-6 w-6 text-blue-400" />
-            <span className="text-xl font-bold">Sebastian's Mathenachhilfe</span>
+            <Calculator className="h-5 w-5 md:h-6 md:w-6 text-blue-400" />
+            <span className="text-lg md:text-xl font-bold">Sebastian's Mathenachhilfe</span>
           </div>
-          <p className="text-sm">
+          <p className="text-xs md:text-sm">
             © 2024 Sebastian's Mathenachhilfe
           </p>
         </div>

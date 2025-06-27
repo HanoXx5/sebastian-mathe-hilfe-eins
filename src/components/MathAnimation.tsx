@@ -45,7 +45,7 @@ const MathAnimation = () => {
   }, [displayedText, isTyping, currentEquation, equations]);
 
   return (
-    <div className="text-3xl md:text-4xl font-bold text-blue-600 font-mono min-h-[3rem] flex items-center justify-center">
+    <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 font-mono min-h-[2rem] md:min-h-[3rem] flex items-center justify-center">
       {displayedText}
       <span className="animate-pulse">|</span>
     </div>
