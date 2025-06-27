@@ -132,7 +132,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-12 md:py-16 px-4 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+      <section id="services" className="py-12 md:py-16 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">Mein Angebot</h3>
@@ -266,33 +266,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-12 md:py-16 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-        <div className="max-w-md mx-auto"> {/* HIER IST DIE BREITENBEGRENZUNG UND ZENTRIERUNG */}
-              <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-lg p-6 md:p-8 shadow-xl"> {/* STÄRKERE FARBEN */}
-                <h4 className="text-xl md:text-2xl font-semibold mb-6 text-center">Kontaktinformationen</h4>
-                <div className="space-y-4 md:space-y-6">
-                  {/* Telefonnummer anklickbar */}
-                  <a href="tel:+491621992865" className="flex items-center space-x-4 p-4 bg-blue-700/70 rounded-lg hover:bg-blue-600/80 transition-colors duration-300 group">
-                    <Phone className="h-5 w-5 md:h-6 md:w-6 text-white group-hover:text-blue-200 transition-colors" />
-                    <span className="text-base md:text-lg font-medium group-hover:text-white transition-colors">+49 162 1992865</span>
-                  </a>
-
-                  {/* E-Mail-Adresse anklickbar */}
-                  <a href="mailto:s.zscherneck@web.de" className="flex items-center space-x-4 p-4 bg-purple-700/70 rounded-lg hover:bg-purple-600/80 transition-colors duration-300 group">
-                    <Mail className="h-5 w-5 md:h-6 md:w-6 text-white group-hover:text-purple-200 transition-colors" />
-                    <span className="text-base md:text-lg font-medium break-all group-hover:text-white transition-colors">s.zscherneck@web.de</span>
-                  </a>
-
-                  {/* Standort (nicht anklickbar, aber gestylt) */}
-                  <div className="flex items-center space-x-4 p-4 bg-gray-700/70 rounded-lg"> {/* Dezentere Farbe hier */}
-                    <MapPin className="h-5 w-5 md:h-6 md:w-6 text-blue-300 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-center">Kranichstr.12, 63329 Egelsbach</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-gray-300 py-6 md:py-8 px-4">
