@@ -45,7 +45,7 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
                 <img 
-                  src="/lovable-uploads/profile-pic(4).png"
+                  src="/lovable-uploads/profile-pic (4).png"
                   alt="Sebastian - Mathe Nachhilfelehrer" 
                   className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
                 />
@@ -71,7 +71,7 @@ const Index = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-600 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300"
                   onClick={() => {
                     const section = document.getElementById("about");
                     if (section) {
