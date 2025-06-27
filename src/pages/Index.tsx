@@ -35,7 +35,7 @@ const Index = () => {
       <section className="relative py-8 md:py-16 px-4 overflow-hidden">
         {/* Background Math Animation - Large and Centered */}
         <div className="absolute inset-0 opacity-15 pointer-events-none z-0 flex items-end justify-center">
-          <div className="text-6xl md:text-8xl lg:text-9xl text-blue-500/60 font-mono mb-5">
+          <div className="text-6xl md:text-8xl lg:text-9xl text-blue-500/75 font-mono mb-5">
             <MathAnimation />
           </div>
         </div>
