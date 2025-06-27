@@ -199,15 +199,16 @@ const Index = () => {
         </CardContent>
       </Card>
     </div>
+         <div className="mt-8 col-span-full">
+            <div className="p-4 bg-gradient-to-r from-blue-700/30 to-purple-700/30 rounded-lg border border-blue-600/50 shadow-md">
+              <p className="text-base md:text-lg text-white font-medium text-center">
+                💡Hinweis: Die Stunden finden bei mir zu Hause in Egelsbach statt.
+              </p>
+            </div>
+          </div>
   </div>
 
-      <div className="mt-8 col-span-full">
-        <div className="p-4 bg-gradient-to-r from-blue-700/30 to-purple-700/30 rounded-lg border border-blue-600/50 shadow-md">
-          <p className="text-base md:text-lg text-white font-medium text-center">
-            💡Hinweis: Die Stunden finden bei mir zu Hause in Egelsbach statt.
-          </p>
-        </div>
-      </div>
+
 </section>
 
       {/* Testimonials Section */}
