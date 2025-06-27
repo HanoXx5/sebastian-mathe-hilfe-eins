@@ -6,7 +6,7 @@ import MathAnimation from "@/components/MathAnimation";
 import StarRating from "@/components/StarRating";
 import ContactForm from "@/components/ContactForm";
 import React from 'react';
-import ParticlesBackground from './components/ParticlesBackground';
+import ParticlesBackground from '@/components/ui/ParticlesBackground';
 
 const Index = () => {
   return (
