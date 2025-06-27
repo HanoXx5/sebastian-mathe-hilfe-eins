@@ -135,23 +135,26 @@ const Index = () => {
       <section id="services" className="py-12 md:py-16 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">Mein Angebot</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+            {/* Überschrift: Mehr Kontrast durch helleren Startpunkt des Gradients und passendere Endfarbe */}
+            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">Mein Angebot</h3>
+            {/* Beschreibungstext: Hellerer Grauton für bessere Lesbarkeit auf dunklem Hintergrund */}
+            <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-base">
               Individuell angepasste Nachhilfe für verschiedene Bildungsstufen und mathematische Bereiche
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-blue-50">
+            {/* Card 1: Schülernachhilfe */}
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-gray-800 to-blue-950/50 border border-blue-700/50"> {/* Dunklerer Hintergrund, subtiler Border */}
               <CardContent className="p-6">
-                <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Calculator className="h-6 w-6 text-blue-600" />
+                <div className="bg-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4"> {/* Kräftigerer Icon-Hintergrund */}
+                  <Calculator className="h-6 w-6 text-white" /> {/* Weißes Icon */}
                 </div>
-                <h4 className="text-lg md:text-xl font-semibold mb-3">Schülernachhilfe</h4>
-                <p className="text-gray-600 mb-4 text-sm md:text-base">
+                <h4 className="text-lg md:text-xl font-semibold mb-3 text-white">Schülernachhilfe</h4> {/* Weißer Titel */}
+                <p className="text-blue-200 mb-4 text-sm md:text-base"> {/* Hellblauer Text für gute Lesbarkeit */}
                   Unterstützung für Schüler aller Klassenstufen - von Grundlagen bis zum Abitur
                 </p>
-                <ul className="space-y-2 text-sm text-gray-600">
+                <ul className="space-y-2 text-sm text-blue-100"> {/* Noch hellere blaue Liste */}
                   <li>• Grundrechenarten</li>
                   <li>• Algebra & Geometrie</li>
                   <li>• Funktionen & Analysis</li>
@@ -160,16 +163,17 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-green-50">
+            {/* Card 2: Studentennachhilfe */}
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-gray-800 to-green-950/50 border border-green-700/50"> {/* Dunklerer Hintergrund, subtiler Border */}
               <CardContent className="p-6">
-                <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-green-600" />
+                <div className="bg-green-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4"> {/* Kräftigerer Icon-Hintergrund */}
+                  <Users className="h-6 w-6 text-white" /> {/* Weißes Icon */}
                 </div>
-                <h4 className="text-lg md:text-xl font-semibold mb-3">Studentennachhilfe</h4>
-                <p className="text-gray-600 mb-4 text-sm md:text-base">
+                <h4 className="text-lg md:text-xl font-semibold mb-3 text-white">Studentennachhilfe</h4> {/* Weißer Titel */}
+                <p className="text-green-200 mb-4 text-sm md:text-base"> {/* Hellgrüner Text */}
                   Unterstützung für Studierende in mathematischen Grundlagenfächern
                 </p>
-                <ul className="space-y-2 text-sm text-gray-600">
+                <ul className="space-y-2 text-sm text-green-100"> {/* Noch hellere grüne Liste */}
                   <li>• Lineare Algebra</li>
                   <li>• Analysis I & II</li>
                   <li>• Klausurvorbereitung</li>
@@ -177,16 +181,17 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 md:col-span-2 lg:col-span-1 bg-gradient-to-br from-white to-purple-50">
+            {/* Card 3: Intensivkurse */}
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 md:col-span-2 lg:col-span-1 bg-gradient-to-br from-gray-800 to-purple-950/50 border border-purple-700/50"> {/* Dunklerer Hintergrund, subtiler Border */}
               <CardContent className="p-6">
-                <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Award className="h-6 w-6 text-purple-600" />
+                <div className="bg-purple-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4"> {/* Kräftigerer Icon-Hintergrund */}
+                  <Award className="h-6 w-6 text-white" /> {/* Weißes Icon */}
                 </div>
-                <h4 className="text-lg md:text-xl font-semibold mb-3">Intensivkurse</h4>
-                <p className="text-gray-600 mb-4 text-sm md:text-base">
+                <h4 className="text-lg md:text-xl font-semibold mb-3 text-white">Intensivkurse</h4> {/* Weißer Titel */}
+                <p className="text-purple-200 mb-4 text-sm md:text-base"> {/* Hellvioletter Text */}
                   Gezielte Vorbereitung auf wichtige Prüfungen und Klausuren
                 </p>
-                <ul className="space-y-2 text-sm text-gray-600">
+                <ul className="space-y-2 text-sm text-purple-100"> {/* Noch hellere violette Liste */}
                   <li>• Abitur-Vorbereitung</li>
                   <li>• Nachprüfungen</li>
                   <li>• Crashkurse</li>
