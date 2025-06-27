@@ -47,7 +47,7 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/profile-pic (5).png"
                   alt="Sebastian - Mathe Nachhilfelehrer" 
-                  className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
+                  className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl transform hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
