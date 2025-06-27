@@ -45,7 +45,7 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
                 <img 
-                  src="/lovable-uploads/d25fb8b4-469e-4c23-9b95-3e2864813d69.png" 
+                  src="/lovable-uploads/profile-pic(4).png"
                   alt="Sebastian - Mathe Nachhilfelehrer" 
                   className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
                 />
