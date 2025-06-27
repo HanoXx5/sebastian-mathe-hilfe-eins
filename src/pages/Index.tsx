@@ -33,7 +33,12 @@ const Index = () => {
 
       {/* Hero Section with Math Animation Background */}
       <section className="relative py-8 md:py-16 px-4 overflow-hidden">
-
+        {/* Background Math Animation - Large and Centered */}
+        <div className="absolute inset-0 opacity-15 pointer-events-none z-0 flex items-center justify-center">
+          <div className="text-6xl md:text-8xl lg:text-9xl text-blue-500/60 font-mono">
+            <MathAnimation />
+          </div>
+        </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-8 md:mb-12">
             <div className="flex justify-center order-1 md:order-1">
@@ -79,12 +84,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          {/* Background Math Animation - Large and Centered */}
-                  <div className="absolute inset-0 opacity-15 pointer-events-none z-0 flex items-center justify-center">
-                    <div className="text-6xl md:text-8xl lg:text-9xl text-blue-500/60 font-mono">
-                      <MathAnimation />
-                    </div>
-                  </div>
+
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-500">
             <div className="flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200 bg-white/50 backdrop-blur-sm rounded-full px-4 py-2">
               <Users className="h-5 w-5 text-green-600" />
