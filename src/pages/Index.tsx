@@ -200,6 +200,10 @@ const Index = () => {
       </Card>
     </div>
   </div>
+
+  <button class="bg-white text-gray-800 font-semibold py-2 px-4 rounded shadow hover:bg-gray-100 transition">
+    Hinweis
+  </button>
 </section>
 
       {/* Testimonials Section */}
