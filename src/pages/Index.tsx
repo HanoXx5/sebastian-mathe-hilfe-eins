@@ -66,7 +66,7 @@ const Index = () => {
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   onClick={() => window.location.href = 'tel:+491621992865'}
                 >
-                  Jetzt Termin vereinbaren
+                  Kostenlose Stunde vereinbaren
                 </Button>
                 <Button
                   variant="outline"
