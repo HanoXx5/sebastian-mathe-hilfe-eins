@@ -90,8 +90,8 @@ const Index = () => {
       <section id="about" className="py-12 md:py-16 px-4 bg-gradient-to-r from-white via-blue-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="text-center animate-fade-in">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Über mich</h3>
+            <div className="animate-fade-in">
+              <h3 className="text-center text-2xl md:text-3xl font-bold text-gray-900 mb-6">Über mich</h3>
               <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
                 Ich bin Sebastian, 20 Jahre alt, und ich helfe dir, Mathe endlich zu verstehen, egal ob du gerade am Anfang stehst oder dich auf dein Abitur vorbereitest.
               </p>
