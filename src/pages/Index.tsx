@@ -52,9 +52,9 @@ const Index = () => {
               </div>
             </div>
             <div className="text-center md:text-left order-2 md:order-2">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
                 Professionelle <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Mathenachhilfe</span>
-              </h2>
+              </h1>
               <p className="text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
                 Hi, ich bin Sebastian! Ich helfe Schülern und Studenten dabei, ihre mathematischen Fähigkeiten zu verbessern. 
                 Mit individueller Betreuung und bewährten Methoden zum Erfolg!
@@ -90,7 +90,7 @@ const Index = () => {
       <section id="about" className="py-12 md:py-16 px-4 bg-gradient-to-r from-white via-blue-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="animate-fade-in">
+            <div className="text-center animate-fade-in">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Über mich</h3>
               <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
                 Ich bin Sebastian, 20 Jahre alt, und ich helfe dir, Mathe endlich zu verstehen, egal ob du gerade am Anfang stehst oder dich auf dein Abitur vorbereitest.
