@@ -61,7 +61,7 @@ const Index = () => {
                 Mit individueller Betreuung und bewährten Methoden zum Erfolg!
               </p>
               
-              <div className="animate__animated animate__pulse animate__delay-2s animate__repeat-infinite animate__slow flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
+              <div className="animate__animated animate__shakeX animate__delay-2s animate__repeat-3 animate__slow flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
