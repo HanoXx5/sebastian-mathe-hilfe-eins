@@ -6,6 +6,8 @@ import MathAnimation from "@/components/MathAnimation";
 import StarRating from "@/components/StarRating";
 import ContactForm from "@/components/ContactForm";
 import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Index = () => {
   return (
