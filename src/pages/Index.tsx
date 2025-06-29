@@ -52,7 +52,7 @@ const Index = () => {
                 />
               </div>
             </div>
-            <div className="animate__animated animate__bounceInUp text-center md:text-left order-2 md:order-2">
+            <div className="animate__animated animate__bounceInUp animate__delay-1s text-center md:text-left order-2 md:order-2">
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
                 Professionelle <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Mathenachhilfe</span>
               </h1>
