@@ -146,7 +146,7 @@ const Index = () => {
 
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
       {/* Card 1: Schülernachhilfe - HELLERER HINTERGRUND */}
-      <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-blue-100 border border-blue-300"> {/* Heller Gradient, passender Border */}
+      <Card data-aos="zoom-in" className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-blue-100 border border-blue-300"> {/* Heller Gradient, passender Border */}
         <CardContent className="p-6">
           <div className="bg-blue-200 w-12 h-12 rounded-lg flex items-center justify-center mb-4"> {/* Hellerer Icon-Hintergrund */}
             <Calculator className="h-6 w-6 text-blue-600" /> {/* Blaue Icons passend zum Hintergrund */}
