@@ -41,7 +41,7 @@ const Index = () => {
           </div>
         </div>
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-8 md:mb-12">
+          <div className="animate__animated animate__pulse grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-8 md:mb-12">
             <div className="flex justify-center order-1 md:order-1">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
