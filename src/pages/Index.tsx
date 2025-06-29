@@ -150,7 +150,7 @@ const Index = () => {
 
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
       {/* Card 1: Schülernachhilfe - HELLERER HINTERGRUND */}
-      <Card data-aos="fade-in" className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-blue-100 border border-blue-300"> {/* Heller Gradient, passender Border */}
+      <Card data-aos="fade-right" className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-blue-100 border border-blue-300"> {/* Heller Gradient, passender Border */}
         <CardContent className="p-6">
           <div className="bg-blue-200 w-12 h-12 rounded-lg flex items-center justify-center mb-4"> {/* Hellerer Icon-Hintergrund */}
             <Calculator className="h-6 w-6 text-blue-600" /> {/* Blaue Icons passend zum Hintergrund */}
@@ -169,7 +169,7 @@ const Index = () => {
       </Card>
 
       {/* Card 2: Studentennachhilfe - HELLERER HINTERGRUND */}
-      <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-green-100 border border-green-300"> {/* Heller Gradient, passender Border */}
+      <Card data-aos="fade-right" data-aos-offset="200" className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 bg-gradient-to-br from-white to-green-100 border border-green-300"> {/* Heller Gradient, passender Border */}
         <CardContent className="p-6">
           <div className="bg-green-200 w-12 h-12 rounded-lg flex items-center justify-center mb-4"> {/* Hellerer Icon-Hintergrund */}
             <Users className="h-6 w-6 text-green-600" /> {/* Grüne Icons */}
@@ -187,7 +187,7 @@ const Index = () => {
       </Card>
 
       {/* Card 3: Intensivkurse - HELLERER HINTERGRUND */}
-      <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 md:col-span-2 lg:col-span-1 bg-gradient-to-br from-white to-purple-100 border border-purple-300"> {/* Heller Gradient, passender Border */}
+      <Card data-aos="fade-right" data-aos-offset="300" className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 md:col-span-2 lg:col-span-1 bg-gradient-to-br from-white to-purple-100 border border-purple-300"> {/* Heller Gradient, passender Border */}
         <CardContent className="p-6">
           <div className="bg-purple-200 w-12 h-12 rounded-lg flex items-center justify-center mb-4"> {/* Hellerer Icon-Hintergrund */}
             <Award className="h-6 w-6 text-purple-600" /> {/* Lila Icons */}
