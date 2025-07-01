@@ -26,8 +26,7 @@ const Impressum = () => {
               <h2 className="text-xl font-semibold text-gray-800 mb-3">Angaben gemäß § 5 TMG</h2>
               <p className="text-gray-600">
                 Sebastian Zscherneck<br />
-                Mathenachhilfe<br />
-                Egelsbach, Deutschland
+                Kranichstr.12, 63329 Egelsbach
               </p>
             </div>
 
