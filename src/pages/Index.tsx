@@ -314,10 +314,10 @@ const Index = () => {
                     </div>
                   </div>
                   <Button
-                    size="lg"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                    onClick={() => window.location.href = 'tel:+491621992865'}
-                  >
+                  size="lg"
+                  className="animate__animated animate__tada animate__delay-2s animate__slow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  onClick={() => window.location.href = 'tel:+491621992865'}
+                >
                     <Phone className="h-4 w-4 mr-2" />
                     Jetzt anrufen
                   </Button>
@@ -335,15 +335,6 @@ const Index = () => {
                       <p className="text-gray-300">s.zscherneck@web.de</p>
                     </div>
                   </div>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="w-full border-white/30 text-white hover:bg-white/10"
-                    onClick={() => window.location.href = 'mailto:s.zscherneck@web.de'}
-                  >
-                    <Mail className="h-4 w-4 mr-2" />
-                    E-Mail schreiben
-                  </Button>
                 </CardContent>
               </Card>
 
@@ -356,7 +347,6 @@ const Index = () => {
                     <div>
                       <h4 className="text-white font-semibold">Standort</h4>
                       <p className="text-gray-300">Egelsbach, Deutschland</p>
-                      <p className="text-gray-400 text-sm">Unterricht bei mir zu Hause</p>
                     </div>
                   </div>
                 </CardContent>
