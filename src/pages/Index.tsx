@@ -298,35 +298,34 @@ const Index = () => {
             <p className="text-gray-300 text-sm md:text-base">Vereinbaren Sie Ihre kostenlose Probestunde. Rufen Sie mich gerne an oder schreiben mir per WhatsApp oder E-Mail.</p>
           </div>
 
+          {/* Der prominente "Jetzt anrufen" Button */}
+          <div className="flex justify-center mb-12"> {/* Zentriert den Button horizontal */}
+            <Button
+              size="lg"
+              className="animate__animated animate__tada animate__delay-2s animate__slow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto max-w-[300px]" /* w-full auf Mobile, zentriert und max-Breite */
+              onClick={() => window.location.href = 'tel:+491621992865'}
+            >
+              <Phone className="h-4 w-4 mr-2" />
+              Jetzt anrufen
+            </Button>
+          </div>
+
           {/* Haupt-Raster für die Kontakt-Details und den Aktionsbereich */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
 
             {/* Linke Spalte: Kontakt-Details (Telefon, E-Mail, Standort) */}
             <div className="space-y-6">
-              {/* Telefon Card - Jetzt mit dem Button direkt darin für bessere Gruppierung */}
+              {/* Telefon Card - Ohne Button, da dieser jetzt oben ist */}
               <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0 sm:space-x-8">
-                    {/* Telefon-Informationen */}
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-blue-600 p-3 rounded-lg flex-shrink-0">
-                        <Phone className="h-6 w-6 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="text-white font-semibold">Telefon</h4>
-                        <p className="text-gray-300">+49 162 1992865</p>
-                      </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-blue-600 p-3 rounded-lg flex-shrink-0">
+                      <Phone className="h-6 w-6 text-white" />
                     </div>
-
-                    {/* Anruf-Button - Jetzt hier integriert */}
-                    <Button
-                      size="lg"
-                      className="animate__animated animate__tada animate__delay-2s animate__slow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
-                      onClick={() => window.location.href = 'tel:+491621992865'}
-                    >
-                      <Phone className="h-4 w-4 mr-2" />
-                      Jetzt anrufen
-                    </Button>
+                    <div>
+                      <h4 className="text-white font-semibold">Telefon</h4>
+                      <p className="text-gray-300">+49 162 1992865</p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -367,7 +366,6 @@ const Index = () => {
               <h4 className="text-white text-xl md:text-2xl font-semibold mb-4">Schreiben Sie mir eine Nachricht!</h4>
               <p className="text-gray-300 mb-6">Nutzen Sie das Kontaktformular, um Ihre Fragen zu stellen oder eine Probestunde zu vereinbaren.</p>
               {/* HIER WÜRDE DEIN KONTAKTFORMULAR EINGEFÜGT WERDEN */}
-              {/* Beispiel-Button für ein Formular (ersetze durch dein Formular-Komponente) */}
               <Button
                   size="lg"
                   className="bg-green-600 hover:bg-green-700 text-white text-base md:text-lg px-6 md:px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
