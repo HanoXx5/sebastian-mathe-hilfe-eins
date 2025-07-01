@@ -296,7 +296,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 pb-1">Kontakt</h3>
-            <p className="text-gray-300 text-sm md:text-base">Vereinbaren Sie Ihre kostenlose Probestunde</p>
+            <p className="text-gray-300 text-sm md:text-base">Vereinbaren Sie Ihre kostenlose Probestunde. Rufen sie mich gerne an oder schreiben mir per Whatsapp oder Email.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
