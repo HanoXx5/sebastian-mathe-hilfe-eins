@@ -1,5 +1,4 @@
-
-import { Calculator, Users, Award, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
+import { Calculator, Users, Award, Phone, Mail, MapPin, CheckCircle, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import MathAnimation from "@/components/MathAnimation";
@@ -9,10 +8,36 @@ import { Link } from "react-router-dom";
 import 'animate.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useState } from "react";
 
 AOS.init();
 
 const Index = () => {
+  const [openFaqItems, setOpenFaqItems] = useState<number[]>([]);
+
+  const toggleFaqItem = (index: number) => {
+    setOpenFaqItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
+  const previewFaqs = [
+    {
+      question: "Was kostet eine Nachhilfestunde?",
+      answer: "Die erste Stunde ist kostenlos! Danach besprechen wir gemeinsam einen fairen Preis, der von der Klassenstufe abhängt."
+    },
+    {
+      question: "Wo findet der Unterricht statt?",
+      answer: "Der Unterricht findet bei mir zu Hause in Egelsbach statt. Dort habe ich einen ruhigen Arbeitsplatz mit allen notwendigen Materialien eingerichtet."
+    },
+    {
+      question: "Welche Klassenstufen unterrichten Sie?",
+      answer: "Ich unterrichte alle Klassenstufen von der 1. Klasse bis zum Abitur (Klasse 13). Auch Studierende mit Mathematik im Nebenfach unterstütze ich gerne."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       {/* Header */}
@@ -299,10 +324,10 @@ const Index = () => {
           </div>
 
           {/* Der prominente "Jetzt anrufen" Button */}
-          <div className="flex justify-center mb-12"> {/* Zentriert den Button horizontal */}
+          <div className="flex justify-center mb-12">
             <Button
               size="lg"
-              className="animate__animated animate__tada animate__delay-2s animate__slow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto max-w-[300px]" /* w-full auf Mobile, zentriert und max-Breite */
+              className="animate__animated animate__tada animate__delay-2s animate__slow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto max-w-[300px]"
               onClick={() => window.location.href = 'tel:+491621992865'}
             >
               <Phone className="h-4 w-4 mr-2" />
@@ -310,12 +335,12 @@ const Index = () => {
             </Button>
           </div>
 
-          {/* Haupt-Raster für die Kontakt-Details und den Aktionsbereich */}
+          {/* Haupt-Raster für die Kontakt-Details und den FAQ-Bereich */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
 
             {/* Linke Spalte: Kontakt-Details (Telefon, E-Mail, Standort) */}
             <div className="space-y-6">
-              {/* Telefon Card - Ohne Button, da dieser jetzt oben ist */}
+              {/* Telefon Card */}
               <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
@@ -361,18 +386,47 @@ const Index = () => {
               </Card>
             </div>
 
-            {/* Rechte Spalte: Platzhalter für Formular oder zusätzliche Infos */}
-            <div className="bg-white/10 border-white/20 backdrop-blur-sm p-8 rounded-lg shadow-lg flex flex-col items-center justify-center text-center min-h-[300px]">
-              <h4 className="text-white text-xl md:text-2xl font-semibold mb-4">Schreiben Sie mir eine Nachricht!</h4>
-              <p className="text-gray-300 mb-6">Nutzen Sie das Kontaktformular, um Ihre Fragen zu stellen oder eine Probestunde zu vereinbaren.</p>
-              {/* HIER WÜRDE DEIN KONTAKTFORMULAR EINGEFÜGT WERDEN */}
-              <Button
+            {/* Rechte Spalte: FAQ-Preview */}
+            <div className="bg-white/10 border-white/20 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+              <h4 className="text-white text-xl md:text-2xl font-semibold mb-6 text-center">Häufige Fragen</h4>
+              
+              <div className="space-y-4 mb-6">
+                {previewFaqs.map((faq, index) => (
+                  <div key={index} className="border-b border-white/20 last:border-b-0">
+                    <button
+                      onClick={() => toggleFaqItem(index)}
+                      className="w-full flex items-center justify-between py-3 text-left hover:text-blue-300 transition-colors"
+                    >
+                      <h5 className="text-white font-medium text-sm">{faq.question}</h5>
+                      {openFaqItems.includes(index) ? (
+                        <ChevronUp className="h-4 w-4 text-gray-300 flex-shrink-0" />
+                      ) : (
+                        <ChevronDown className="h-4 w-4 text-gray-300 flex-shrink-0" />
+                      )}
+                    </button>
+                    {openFaqItems.includes(index) && (
+                      <div className="pb-3">
+                        <p className="text-gray-300 text-sm leading-relaxed">{faq.answer}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-center">
+                <Button
                   size="lg"
-                  className="bg-green-600 hover:bg-green-700 text-white text-base md:text-lg px-6 md:px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-                  onClick={() => alert('Hier würde das Formular geöffnet / gesendet werden!')}
-              >
-                  Zum Kontaktformular
-              </Button>
+                  variant="outline"
+                  className="border-white/30 text-white hover:bg-white/10 hover:text-white text-base px-6 py-3 transition-all duration-300"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/faq';
+                    link.click();
+                  }}
+                >
+                  Alle FAQs ansehen
+                </Button>
+              </div>
             </div>
           </div>
         </div>
