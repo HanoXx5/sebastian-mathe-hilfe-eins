@@ -25,8 +25,8 @@ const Index = () => {
 
   const previewFaqs = [
     {
-      question: "Was kostet eine Nachhilfestunde?",
-      answer: "Die erste Stunde ist kostenlos! Danach besprechen wir gemeinsam einen fairen Preis, der von der Klassenstufe abhängt."
+      question: "Wie lange dauert eine Nachhilfestunde?",
+      answer: "Eine Nachhilfestunde dauert in der Regel 60 min. Bei akutem Bedarf können die Zeiten auch individuell abgestimmt werden."
     },
     {
       question: "Wo findet der Unterricht statt?",
@@ -417,7 +417,7 @@ const Index = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/30 text-white hover:bg-white/10 hover:text-white text-base px-6 py-3 transition-all duration-300"
+                  className="border-2 border-white/60 text-white hover:bg-white/20 hover:text-white px-8 py-4 text-base font-medium rounded-full smooth-transition hover-lift shadow-lg backdrop-blur-sm"
                   onClick={() => {
                     const link = document.createElement('a');
                     link.href = '/faq';
