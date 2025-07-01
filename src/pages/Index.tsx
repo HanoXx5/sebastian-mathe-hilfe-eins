@@ -298,7 +298,17 @@ const Index = () => {
             <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 pb-1">Kontakt</h3>
             <p className="text-gray-300 text-sm md:text-base">Vereinbaren Sie Ihre kostenlose Probestunde. Rufen sie mich gerne an oder schreiben mir per Whatsapp oder Email.</p>
           </div>
-
+            <div>
+                    {/* Button */}
+                    <Button
+                      size="lg"
+                      className="animate__animated animate__tada animate__delay-2s animate__slow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                      onClick={() => window.location.href = 'tel:+491621992865'}
+                    >
+                      <Phone className="h-4 w-4 mr-2" />
+                      Jetzt anrufen
+                    </Button>
+                    </div>
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
             {/* Kontakt Details */}
             <div className="space-y-6">
@@ -315,16 +325,6 @@ const Index = () => {
                         <p className="text-gray-300">+49 162 1992865</p>
                       </div>
                     </div>
-
-                    {/* Button */}
-                    <Button
-                      size="lg"
-                      className="animate__animated animate__tada animate__delay-2s animate__slow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-                      onClick={() => window.location.href = 'tel:+491621992865'}
-                    >
-                      <Phone className="h-4 w-4 mr-2" />
-                      Jetzt anrufen
-                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -358,10 +358,6 @@ const Index = () => {
               </Card>
             </div>
 
-            {/* Kontakt Formular */}
-            <div>
-              <ContactForm />
-            </div>
           </div>
         </div>
       </section>
