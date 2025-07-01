@@ -304,23 +304,28 @@ const Index = () => {
             <div className="space-y-6">
               <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className="bg-blue-600 p-3 rounded-lg">
-                      <Phone className="h-6 w-6 text-white" />
+                  <div className="flex flex-col md:flex-row items-center md:justify-between space-y-4 md:space-y-0 md:space-x-8 mb-4"> {/* Angepasster Flex-Container */}
+                    {/* Telefon-Informationen */}
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-blue-600 p-3 rounded-lg">
+                        <Phone className="h-6 w-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold">Telefon</h4>
+                        <p className="text-gray-300">+49 162 1992865</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="text-white font-semibold">Telefon</h4>
-                      <p className="text-gray-300">+49 162 1992865</p>
-                    </div>
+
+                    {/* Button */}
+                    <Button
+                      size="lg"
+                      className="animate__animated animate__tada animate__delay-2s animate__slow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                      onClick={() => window.location.href = 'tel:+491621992865'}
+                    >
+                      <Phone className="h-4 w-4 mr-2" />
+                      Jetzt anrufen
+                    </Button>
                   </div>
-                  <Button
-                  size="lg"
-                  className="animate__animated animate__tada animate__delay-2s animate__slow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  onClick={() => window.location.href = 'tel:+491621992865'}
-                >
-                    <Phone className="h-4 w-4 mr-2" />
-                    Jetzt anrufen
-                  </Button>
                 </CardContent>
               </Card>
 
