@@ -291,76 +291,87 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-12 md:py-16 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 pb-1">Kontakt</h3>
-            <p className="text-gray-300 text-sm md:text-base">Vereinbaren Sie Ihre kostenlose Probestunde. Rufen sie mich gerne an oder schreiben mir per Whatsapp oder Email.</p>
-          </div>
-            <div>
-                    {/* Button */}
-                    <Button
-                      size="lg"
-                      className="animate__animated animate__tada animate__delay-2s animate__slow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-                      onClick={() => window.location.href = 'tel:+491621992865'}
-                    >
-                      <Phone className="h-4 w-4 mr-2" />
-                      Jetzt anrufen
-                    </Button>
-                    </div>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
-            {/* Kontakt Details */}
-            <div className="space-y-6">
-              <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <div className="flex flex-col md:flex-row items-center md:justify-between space-y-4 md:space-y-0 md:space-x-8 mb-4"> {/* Angepasster Flex-Container */}
-                    {/* Telefon-Informationen */}
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-blue-600 p-3 rounded-lg">
-                        <Phone className="h-6 w-6 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="text-white font-semibold">Telefon</h4>
-                        <p className="text-gray-300">+49 162 1992865</p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+     <section id="contact" className="py-12 md:py-16 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+       <div className="max-w-6xl mx-auto">
+         <div className="text-center mb-12">
+           <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 pb-1">Kontakt</h3>
+           <p className="text-gray-300 text-sm md:text-base">Vereinbaren Sie Ihre kostenlose Probestunde. Rufen Sie mich gerne an oder schreiben mir per WhatsApp oder E-Mail.</p>
+         </div>
 
-              <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className="bg-purple-600 p-3 rounded-lg">
-                      <Mail className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="text-white font-semibold">E-Mail</h4>
-                      <p className="text-gray-300">s.zscherneck@web.de</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+         {/* Main Grid for Contact Details and Form/CTA */}
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+           {/* Left Column: Contact Details & Integrated Phone Button */}
+           <div className="space-y-6">
+             {/* Phone Card - Now includes the button within it for better grouping */}
+             <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+               <CardContent className="p-6">
+                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0 sm:space-x-8"> {/* Responsive Flex Container */}
+                   {/* Telefon-Informationen */}
+                   <div className="flex items-center space-x-4">
+                     <div className="bg-blue-600 p-3 rounded-lg flex-shrink-0"> {/* Added flex-shrink-0 */}
+                       <Phone className="h-6 w-6 text-white" />
+                     </div>
+                     <div>
+                       <h4 className="text-white font-semibold">Telefon</h4>
+                       <p className="text-gray-300">+49 162 1992865</p>
+                     </div>
+                   </div>
 
-              <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-indigo-600 p-3 rounded-lg">
-                      <MapPin className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="text-white font-semibold">Standort</h4>
-                      <p className="text-gray-300">Egelsbach, Deutschland</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+                   {/* Anruf Button - Integrated here */}
+                   <Button
+                     size="lg"
+                     className="animate__animated animate__tada animate__delay-2s animate__slow bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base md:text-lg px-6 md:px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto" {/* Added w-full sm:w-auto */}
+                     onClick={() => window.location.href = 'tel:+491621992865'}
+                   >
+                     <Phone className="h-4 w-4 mr-2" />
+                     Jetzt anrufen
+                   </Button>
+                 </div>
+               </CardContent>
+             </Card>
 
-          </div>
-        </div>
-      </section>
+             {/* E-Mail Card */}
+             <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+               <CardContent className="p-6">
+                 <div className="flex items-center space-x-4">
+                   <div className="bg-purple-600 p-3 rounded-lg flex-shrink-0">
+                     <Mail className="h-6 w-6 text-white" />
+                   </div>
+                   <div>
+                     <h4 className="text-white font-semibold">E-Mail</h4>
+                     <p className="text-gray-300">s.zscherneck@web.de</p>
+                   </div>
+                 </div>
+                 {/* Optional: E-Mail Button here if needed */}
+               </CardContent>
+             </Card>
+
+             {/* Location Card */}
+             <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+               <CardContent className="p-6">
+                 <div className="flex items-center space-x-4">
+                   <div className="bg-indigo-600 p-3 rounded-lg flex-shrink-0">
+                     <MapPin className="h-6 w-6 text-white" />
+                   </div>
+                   <div>
+                     <h4 className="text-white font-semibold">Standort</h4>
+                     <p className="text-gray-300">Egelsbach, Deutschland</p>
+                   </div>
+                 </div>
+                 {/* Optional: Google Maps Button here if needed */}
+               </CardContent>
+             </Card>
+           </div>
+
+           {/* Right Column: Placeholder for Contact Form or Other Content */}
+           {/* You would typically place your contact form or a larger CTA here */}
+           <div className="bg-white/10 border-white/20 backdrop-blur-sm p-8 rounded-lg shadow-lg flex items-center justify-center min-h-[300px]">
+             <p className="text-gray-300 text-lg">Platzhalter für Kontaktformular oder weitere Informationen.</p>
+             {/* Your <form> component or other relevant content goes here */}
+           </div>
+         </div>
+       </div>
+     </section>
 
       {/* Footer */}
       <footer className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-gray-300 py-6 md:py-8 px-4">
