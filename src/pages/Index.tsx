@@ -33,9 +33,9 @@ const Index = () => {
       answer: "Der Unterricht findet bei mir zu Hause in Egelsbach statt. Dort habe ich einen ruhigen Arbeitsplatz mit allen notwendigen Materialien eingerichtet."
     },
     {
-      question: "Welche Klassenstufen unterrichten Sie?",
-      answer: "Ich unterrichte alle Klassenstufen von der 1. Klasse bis zum Abitur (Klasse 13). Auch Studierende mit Mathematik im Nebenfach unterstütze ich gerne."
-    }
+      question: "Welche Fächer werden unterrichtet?",
+      answer: "Grundsätzlich liegt der Schwerpunkt auf Mathe. Nach Absprache können aber auch andere Fächer, besonders die Naturwissenschaften, unterstützt werden."
+      }
   ];
 
   return (

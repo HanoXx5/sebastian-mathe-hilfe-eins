@@ -20,19 +20,19 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Wie läuft eine Nachhilfestunde ab?",
-      answer: "Jede Stunde beginnt mit einer kurzen Wiederholung des letzten Themas. Dann arbeiten wir gemeinsam an aktuellen Aufgaben oder bereiten uns auf Tests vor. Am Ende gibt es eine Zusammenfassung und Hausaufgaben für die nächste Stunde."
+      answer: "Jede Stunde beginnt mit einer kurzen Wiederholung des letzten Themas. Dann arbeiten wir gemeinsam an aktuellen Aufgaben oder bereiten uns auf Tests vor."
     },
     {
       question: "Wo findet der Unterricht statt?",
-      answer: "Der Unterricht findet bei mir zu Hause in Egelsbach statt. Dort habe ich einen ruhigen Arbeitsplatz mit allen notwendigen Materialien eingerichtet."
+      answer: "Der Unterricht findet bei mir zu Hause in Egelsbach statt. Somit ist aus der nahen Umgebung Langen, Erzhausen und Dreieich gut erreichbar. Dort habe ich einen ruhigen Arbeitsplatz mit allen notwendigen Materialien eingerichtet."
     },
     {
       question: "Wie lange dauert eine Nachhilfestunde?",
       answer: "Eine Standardstunde dauert 60 Minuten. Je nach Bedarf können wir auch 90-Minuten-Einheiten vereinbaren, besonders vor wichtigen Prüfungen."
     },
     {
-      question: "Was kostet eine Nachhilfestunde?",
-      answer: "Die erste Stunde ist kostenlos! Danach besprechen wir gemeinsam einen fairen Preis, der von der Klassenstufe und dem Umfang abhängt. Kontaktieren Sie mich für ein individuelles Angebot."
+      question: "Welche Fächer werden unterrichtet?",
+      answer: "Grundsätzlich liegt der Schwerpunkt auf Mathe. Nach Absprache können aber auch andere Fächer, besonders die Naturwissenschaften, unterstützt werden."
     },
     {
       question: "Welche Klassenstufen unterrichten Sie?",
@@ -100,12 +100,6 @@ const FAQ = () => {
                 className="bg-blue-600 hover:bg-blue-700"
               >
                 Jetzt anrufen
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => window.location.href = 'mailto:s.zscherneck@web.de'}
-              >
-                E-Mail schreiben
               </Button>
             </div>
           </div>
