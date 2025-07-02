@@ -414,18 +414,14 @@ const Index = () => {
               </div>
 
               <div className="text-center">
-                <Button
+                <Link
+                  to="/faq"
                   size="lg"
                   variant="outline"
                   className="border-2 border-white/60 text-purple-600 hover:bg-white/20 hover:text-white px-8 py-4 text-base font-medium rounded-full smooth-transition hover-lift shadow-lg backdrop-blur-sm"
-                  onClick={() => {
-                    const link = document.createElement('a');
-                    link.href = '/faq';
-                    link.click();
-                  }}
                 >
                   Alle FAQs ansehen
-                </Button>
+                </Link>
               </div>
             </div>
           </div>
