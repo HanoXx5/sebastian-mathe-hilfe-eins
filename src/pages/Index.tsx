@@ -132,7 +132,7 @@ const Index = () => {
                 Ich bin Sebastian, 20 Jahre alt, und ich helfe dir, Mathe endlich zu verstehen, egal ob du gerade am Anfang stehst oder dich auf dein Abitur vorbereitest.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
-                Mit 15 Punkten im Mathe-Leistungskurs und einem Abiturdurchschnitt von 1,2 bringe ich nicht nur das nötige Fachwissen mit, sondern auch die Erfahrung: Ich habe bereits über 10 Schüler*innen aller Klassenstufen erfolgreich begleitet – von der 1. Klasse bis zum Abitur. Auch Studierende mit Mathematik im Nebenfach unterstütze ich gerne und effektiv.
+                Mit 15 Punkten im Mathe-Leistungskurs und einem Abiturdurchschnitt von 1,2 bringe ich nicht nur das nötige Fachwissen mit, sondern auch die Erfahrung: Ich habe bereits über 10 Schüler*innen aller Klassenstufen aus der Umgebung Egelsbach, Langen, Erzhausen und Dreieich erfolgreich begleitet – von der 1. Klasse bis zum Abitur. Auch Studierende mit Mathematik im Nebenfach unterstütze ich gerne und effektiv.
               </p>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                 <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm hover:bg-blue-200 transition-colors duration-200">Algebra</span>
