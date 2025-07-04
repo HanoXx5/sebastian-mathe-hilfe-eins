@@ -87,7 +87,7 @@ const Index = () => {
                 Professionelle <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Mathenachhilfe</span>
               </h1>
               <p className="text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
-                Hi, ich bin Sebastian! Ich helfe Schülern und Studenten dabei, ihre mathematischen Fähigkeiten zu verbessern. 
+                Hi, ich bin Sebastian! Ich helfe Schülern und Studenten aus der Umgebung Langen, Egelsbach und Erzhausen dabei, ihre mathematischen Fähigkeiten zu verbessern.
                 Mit individueller Betreuung und bewährten Methoden zum Erfolg!
               </p>
               
